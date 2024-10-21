@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lalala 3 Utilities</title>
+  <link rel="icon" type="image/png" href="images/Lalala logo.jpg">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles/aboutUser.css" type="text/css">
+</head>
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand">
+          <img src="images/Lalala logo.jpg" alt="Logo" width="220" height="110">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a id="homeLink" class="nav-link" href="/HomePageUser">Início</a>
+            </li>
+            <li class="nav-item">
+              <a id="homeLink1" class="nav-link" href="/homePageAdmin">Início</a>
+            </li>
+            <li class="nav-item active">
+              <a id="aboutLink" class="nav-link" href="/aboutUser">Sobre nós</a>
+            </li>
+            <li class="nav-item">
+              <a id="servicesLink" class="nav-link" href="/servicesUser">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a id="contactLink" class="nav-link" href="/contactUser">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a id="accountLink" class="nav-link" href="/account">Conta</a>
+            </li>
+            <li class="nav-item">
+              <a id="privacyPoliticsLink" class="nav-link" href="/privacyPolicy">Política de Privacidade</a>
+            </li>
+            <li class="nav-item">
+              <a id="termsAndConditionsLink" class="nav-link" href="/termsAndConditions">Termos e condições</a>
+            </li>
+            <li class="nav-item">
+              <a id="adminServicesLink" class="nav-link" href="/adminServices">Serviços Admin</a>
+            </li>
+          </ul>
+        </div>
+        <input type="radio" id="portuguese" name="language" onclick="changeLanguage('pt')" value="portuguese" checked>
+        <label for="portuguese">PT</label>
+
+        <input type="radio" id="english" name="language" onclick="changeLanguage('en')" value="english">
+        <label for="english">ENG</label>
+        <a class="shopping-cart" href="/cart">
+          <i class="fas fa-shopping-cart shopping-icon"></i>
+          <div class="cart-item-count-container">
+              <span id="cartItemCount" class="cart-item-count-circle"></span> <!-- Exemplo de número de itens no carrinho -->
+          </div>
+        </a>
+        <a class="profile-button" href="/account">
+          <i class="fas fa-user profile-icon"></i>
+        </a>    
+        <a class="logout-button" href="">
+          <i class="fas fa-sign-out-alt logout-icon"></i>
+      </a>
+      </div>
+    </nav>
+  </header>
+  <body>
+    <div id="textAbout">
+      <h2 id="titleAbout"> Bem-vindo à Lalala Utilitites! </h2>
+      <p id = textAboutUs1>
+        Nós somos uma equipa dinâmica dedicada a proporcionar uma experiência excepcional de compras online. 
+        Na nossa essência, acreditamos em oferecer uma variedade diversificada de produtos de alta qualidade
+         aos nossos clientes, cuidadosamente selecionados para atender as suas necessidades e preferências. 
+         Com foco em conveniência e confiabilidade, procuramos tornar a sua experiência de compras suave e 
+         agradável. A nossa plataforma é projetada para apresentar uma ampla seleção de itens, desde moda 
+         e eletrónicos até decoração para casa e muito mais.
+          Sejas uma pessoa que gosta de tendências ou procures itens essenciais para o dia a dia,
+           estamos aqui para ajudar. O Nosso compromisso com a satisfação do cliente guia tudo o que fazemos,
+            e estamos em constantemente evolução para aprimorar as nossas ofertas e melhorar a sua experiência de compra. 
+            Junte-se a nós e descubra um mundo de possibilidades na nossa loja online.
+      </p>
+      <p id="textAboutUs">
+        Somos uma equipa de apaixonados por tecnologia e entusiastas de programação dedicados 
+        a oferecer soluções criativas e inovadoras para os desafios digitais de hoje. 
+        Combinando criatividade e compromisso com a excelência, estamos aqui para transformar 
+        as suas ideias em realidade. A Nossa jornada na programação começou com a paixão por resolver 
+        problemas e a busca incessante pelo conhecimento. Os Nossos objetivos são aplicar o nosso 
+        conhecimento diversificado para criar soluções sob medida que atendam às necessidades 
+        exclusivas de cada projeto. Na Lalala utilities, acreditamos firmemente na importância
+         da colaboração e parceria. Trabalhamos lado a lado com os nossos clientes, ouvindo 
+         atentamente as suas necessidades e objetivos, para garantir que cada solução que entregamos 
+         não apenas atenda, mas exceda as expectativas. A Nossa abordagem centrada no cliente nos 
+         permite construir relacionamentos sólidos e duradouros, fundamentados na confiança e na
+         transparência. Além do nosso compromisso com a excelência técnica, também valorizamos a 
+         comunicação clara e eficaz. Mantemos os nossos clientes informados e envolvidos durante todo
+         o processo de desenvolvimento, garantindo que eles tenham visibilidade total sobre o progresso
+         do projeto e possam contribuir com um feedback valioso. Se estás à procura de uma equipa confiável 
+         para ajudar a transformar as tuas ideias em realidade digital, entre em contato conosco. 
+         Estamos ansiosos para colaborar contigo e criar algo incrível juntos!
+      </p> 
+      <a class="contactUs" href="/contactUser">Contacta-nos</a>
+    </div>
+    <a class="telegram-button" href="https://t.me/lalala_utilities">
+      <img class="telegram-image" src="images/telegram.png" alt="Telegram Contact">
+  </a>
+  <a class="instagram-button" href="https://t.me/lalala_utilities">
+      <img class="instagram-image" src="images/instagram.png" alt="Instagram Contact">
+  </a>
+  <a class="email-button" href="mailto:Lalalautilities2024@hotmail.com">
+      <img class="email-image" src="images/Email.png" alt="Email Contact">
+  </a>
+  <!-- Adicione o jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Adicione o JavaScript do Bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <!-- Adicione o seu script personalizado -->
+  <script src="scripts/aboutUser.js"></script>
+
+</body>
+<footer>&copy;José Lúcio</footer>
+</html>

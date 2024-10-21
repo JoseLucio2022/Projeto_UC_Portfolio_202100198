@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lalala 3 Utilities</title>
+  <link rel="icon" type="image/png" href="images/Lalala logo.jpg">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles/homepage.css" type="text/css">
+</head>
+
+<header class="header">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="images/Lalala logo.jpg" alt="Logo" width="220" height="110">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a id="homeLink" class="nav-link" href="/">Inicío</a>
+          </li>
+          <li class="nav-item">
+            <a id="aboutLink" class="nav-link" href="/about">Sobre nós</a>
+          </li>
+          <li class="nav-item">
+            <a id="servicesLink" class="nav-link" href="/services">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a id="contactLink" class="nav-link" href="/contact">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a id="privacyPoliticsLink" class="nav-link" href="/privacyPolicy">Política de Privacidade</a>
+          </li>
+          <li class="nav-item">
+            <a id="termsAndConditionsLink" class="nav-link" href="/termsAndConditions">Termos e condições</a>
+          </li>
+        </ul>
+      </div>
+      <input type="radio" id="portuguese" name="language" onclick="changeLanguage('pt')" value="portuguese" checked>
+      <label for="portuguese">PT</label>
+
+      <input type="radio" id="english" name="language" onclick="changeLanguage('en')" value="english">
+      <label for="english">ENG</label>
+      <a href="/login"><button class="btn btn-primary" id="Login">Entrar</button></a>
+    </div>
+  </nav>
+</header>
+
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-3" id="products">Produtos</h1>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" id="searchInput" maxlength="50" placeholder="Pesquisar produtos pelo nome">
+      <button class="btn btn-outline-secondary" type="button" id="searchButton">Pesquisar</button>
+    </div> 
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" id="searchInput1" maxlength="50" placeholder="Pesquisar produtos por categoria">
+      <button class="btn btn-outline-secondary" type="button" id="searchButton1">Pesquisar</button>
+    </div>
+    <div class="dropdown category1">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="categoryDropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        Escolhe a categoria
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="categoryDropdownMenuButton">
+        <!-- Aqui você pode adicionar as categorias dinamicamente com AJAX -->
+      </ul>
+    </div> 
+    
+    <div class="dropdown subCategory1">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="subCategoryDropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        Escolhe a subcategoria
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="subCategoryDropdownMenuButton">
+        <!-- Aqui você pode adicionar as subcategorias dinamicamente com AJAX -->
+      </ul>
+    </div> 
+    
+    <div class="row" id="products-container"></div>
+  </div>
+
+  <!-- Adicione o jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="scripts/homePage.js"></script>
+</body>
+
+<footer>&copy;José Lúcio</footer>
+
+</html>

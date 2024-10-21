@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lalala 3 Utilities</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/termsAndConditions.css" type="text/css">
+    <link rel="icon" type="image/png" href="images/Lalala logo.jpg">
+</head>
+<header class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/HomepageUser">
+                <img src="images/Lalala logo.jpg" alt="Logo" width="220" height="110">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a id="homeLink" class="nav-link" href="/homePageUser">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="homeLink1" class="nav-link" href="/homePageAdmin">Início</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a id="homeLink2" class="nav-link" href="/">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="aboutLink" class="nav-link" href="/aboutUser">Sobre nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="aboutLink1" class="nav-link" href="/about">Sobre nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="servicesLink" class="nav-link" href="/servicesUser">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="servicesLink1" class="nav-link" href="/services">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="contactLink" class="nav-link" href="/contactUser">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="contactLink1" class="nav-link" href="/contact">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="accountLink" class="nav-link" href="/account">Conta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="privacyPoliticsLink" class="nav-link" href="/privacyPolicy">Política de Privacidade</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="termsAndConditionsLink" class="nav-link" href="/termsAndConditions">Termos e
+                            condições</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="adminServicesLink" class="nav-link" href="/adminServices">Serviços Admin</a>
+                    </li>
+                </ul>
+            </div>
+
+            <input type="radio" id="portuguese" name="language" onclick="changeLanguage('pt')" value="portuguese"
+                checked>
+            <label for="portuguese">PT</label>
+
+            <input type="radio" id="english" name="language" onclick="changeLanguage('en')" value="english">
+            <label for="english">ENG</label>
+            <a class="shopping-cart" href="/cart">
+                <i class="fas fa-shopping-cart shopping-icon"></i>
+                <div class="cart-item-count-container">
+                    <span id="cartItemCount" class="cart-item-count-circle"></span>
+                    <!-- Exemplo de número de itens no carrinho -->
+                </div>
+            </a>
+            <a class="profile-button" href="/account">
+                <i class="fas fa-user profile-icon"></i>
+            </a>
+            <a class="logout-button" href="">
+                <i class="fas fa-sign-out-alt logout-icon"></i>
+            </a>
+            <a href="/login"><button class="btn btn-primary" id="Login">Entrar</button></a>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <h3 id="bodyTitle"><span>LALALA UTILITIES | </span><span class="termsAndConditions1">Termos de utilização</span>
+    </h3>
+    <p id="lastUpdate">Última atualização: 16 de Junho de 2024</p>
+    <p id="infoText">Obrigado por utilizar a Lalala Utilities! Os presentes Termos de Utilização ("Termos") contêm as
+        regras e restrições que regem a sua utilização das nossas aplicações, produtos, serviços e websites
+        ("Serviços"). Os presentes Termos constituem um acordo vinculativo entre si e nós. Ao concluir o processo de
+        registo e/ou ao navegar nos Serviços, declara que (1) leu, compreendeu e concorda com os Termos; (2) tem idade
+        legal para celebrar um contrato vinculativo connosco; (3) tem autoridade para celebrar os Termos pessoalmente; e
+        (4) se estiver a utilizar os Serviços em nome de uma empresa ou outra entidade, (a) concorda que o termo
+        "Utilizador" o inclui a si e a essa entidade, (b) é um representante autorizado da entidade com autoridade para
+        celebrar os presentes Termos em nome da entidade, e (c) aceita os presentes Termos em nome da entidade. Não deve
+        aceder ou utilizar os Serviços a menos que aceite vincular-se aos presentes Termos.</p>
+    <div id="geralDescriptionDiv">
+        <h5><span id="geralDescriptionNumber">1.</span><span id="geralDescription"> Descrição Geral</span></h5>
+        <p><span id="oneDotOne">1.1</span><span id="oneDotOneText"> Os presentes Termos são celebrados entre o
+                utilizador e a Lalala Utilities Limited, uma empresa registada em Portugal.</span></p>
+        <p><span id="oneDotTwo">1.2</span><span id="oneDotTwoText"> A Lalala Utilities Limited é referida nos presentes
+                Termos e Políticas (conforme definido abaixo) como "nós" ou "nos". Para efeitos dos presentes Termos e
+                Políticas, também nos referimos a:</span></p>
+        <p id="oneDotTwoText1"> O nosso website e aplicações móveis, que podem oferecer funcionalidades, produtos,
+            serviços ou conteúdos, incluindo trocas de informações, como "Lalala Utilities" ou "a nossa aplicação";</p>
+        <p id="oneDotTwoText2"> Os utilizadores finais, incluindo visitantes da Lalala Utilities e aqueles que usam a
+            Lalala Utilities para comprar produtos como o "utilizador".</p>
+        <p><span id="oneDotThree">1.3</span><span id="oneDotThreeText"> Nós e as nossas afiliadas fornecemos apoio
+                técnico e operacional à nossa aplicação. Pode pagar várias encomendas numa única transação na Lalala
+                Utilities. É possível entregar várias encomendas num único pacote.</span></p>
+        <p><span id="oneDotFour">1.4</span><span id="oneDotFourText"> A sua utilização e participação em determinados
+                Serviços estão sujeitas a políticas adicionais ("Políticas"). Atualizamos estas Políticas e publicamos
+                novas, conforme necessário, periodicamente. Se os Termos forem inconsistentes com as Políticas, estas
+                deverão prevalecer relativamente ao assunto relevante.</span></p>
+        <p><span id="oneDotFive">1.5</span><span id="oneDotFiveText"> Reservamo-nos o direito de fazer alterações aos
+                presentes Termos que não afetem a presente Secção 1.5 ou as nossas principais obrigações de desempenho e
+                que não sejam equivalentes à celebração de um novo contrato. Essas modificações serão publicadas nos
+                links "Termos de utilização" no rodapé do website da Lalala Utilities e no menu "Definições" na aplicação da Lalala
+                Utilities. As modificações só farão parte destes Termos após a sua aceitação pelo Utilizador.
+                Informá-lo-emos das modificações. Se não se opuser aos Termos modificados no prazo de três semanas,
+                considerar-se-á que os aceitou. Quando o notificarmos relativamente a alterações aos Termos,
+                informá-lo-emos das condições nas quais os Termos serão considerados aceites por si.</span></p>
+    </div>
+    <div id="userRegistryDiv">
+        <h5><span id="userRegistryNumber">2.</span><span id="userRegistry"> Requisitos e registo do Utilizador</span>
+        </h5>
+        <p><span id="twoDotOne">2.1</span><span id="twoDotOneText"> Para utilizar os Serviços, declara que está a
+                utilizar os serviços exclusivamente para uso pessoal (não comercial) e que tem, pelo menos, dezoito (18)
+                anos e a maioridade, conforme definido pelas leis aplicáveis. Podem ser vendidos na Lalala Utilities
+                produtos destinados à utilização por crianças. No entanto, estes produtos destinam-se à venda a adultos.
+                Determinados produtos podem ser destinados apenas a pessoas de determinadas idades ou "públicos-alvo
+                adultos". Ao encomendar esses produtos, certifica que tem idade suficiente para os ver, utilizar,
+                possuir ou receber. Não somos responsáveis por conteúdos de terceiros que possa considerar ofensivos,
+                indecentes ou censuráveis, embora possamos remover ou restringir conteúdos ofensivos ou nocivos de
+                acordo com os nossos processos de moderação de conteúdos.</span></p>
+        <p><span id="twoDotTwo">2.2</span><span id="twoDotTwoText"> O Utilizador não poderá utilizar os Serviços se: (a)
+                o utilizador não puder celebrar um contrato vinculativo connosco; ou (b) o utilizador estiver proibido
+                por nós de utilizar os Serviços por violar os presentes Termos ou com base noutros motivos
+                razoáveis.</span></p>
+        <p><span id="twoDotThree">2.3</span><span id="twoDotThreeText"> Pode ser necessário criar uma conta e selecionar
+                uma palavra-passe e um nome de utilizador. Ao criar a sua conta na Lalala Utilities ("Conta"), concorda
+                em fornecer informações verdadeiras, precisas, completas e atualizadas sobre si, incluindo detalhes de
+                contacto. O Utilizador é responsável por manter as suas informações de registo atualizadas. O Utilizador
+                é responsável por todas as atividades que ocorram na sua Conta. O Utilizador concorda que deve
+                monitorizar a sua Conta para restringir a utilização por menores e que irá aceitar total
+                responsabilidade por qualquer utilização não autorizada dos Serviços por menores que permita ou
+                autorize. O Utilizador não pode selecionar como nome de utilizador um nome que não tenha o direito de
+                usar, ou o nome de outra pessoa com a intenção de se fazer passar por essa pessoa. O Utilizador não pode
+                transferir a sua Conta para outra pessoa sem a nossa autorização prévia por escrito. Reservamo-nos o
+                direito de suspender e banir utilizadores por violação dos presentes Termos e das nossas Políticas. O
+                Utilizador concorda em não criar uma Conta ou utilizar os Serviços se tiver sido permanentemente banido
+                de qualquer um dos Serviços. Consulte a cláusula 3.5 abaixo e as nossas Diretrizes da Comunidade para
+                obter informações sobre condutas proibidas. O Utilizador não pode partilhar a sua Conta ou palavra-passe
+                com ninguém e concorda em notificar-nos imediatamente de qualquer utilização não autorizada da sua
+                palavra-passe ou de qualquer outra violação de segurança e em sair da sua Conta no final de cada sessão.
+                Quando o Utilizador cria uma conta, os detalhes da Conta são apresentados para confirmação antes do
+                envio do pedido de registo, podendo o Utilizador corrigir as informações de registo até ao envio do
+                pedido. Reservamo-nos o direito de aceitar ou rejeitar todos os pedidos de registo, e a Lalala Utilities
+                não será responsável perante qualquer pessoa por recusar o registo. O contrato relativo ao seu registo
+                na Lalala Utilities torna-se válido quando confirmamos o seu registo por e-mail ou de outra
+                forma.</span></p>
+        <p><span id="twoDotFour">2.4</span><span id="twoDotFourText"> Também pode registar uma conta ligando-se através
+                de uma conta de serviço de rede social e as suas credenciais (uma "Conta de Redes Sociais"). Se aceder
+                aos Serviços através de uma Rede Social como parte da funcionalidade dos Serviços, pode vincular a sua
+                Conta a Contas de Redes Sociais permitindo-nos aceder à sua Conta de Redes Sociais, conforme permitido
+                nos termos e condições aplicáveis que regem a sua Conta de Redes Sociais. O Utilizador declara que tem o
+                direito de nos conceder acesso à sua Conta de Redes Sociais para utilização dos Serviços sem violação
+                por parte do Utilizador de qualquer um dos termos e condições que regem a sua Conta de Redes Sociais e
+                sem nos obrigar a pagar quaisquer taxas ou sujeitar-nos a quaisquer limitações de utilização impostas
+                por tais Redes Sociais. Ao conceder-nos acesso a quaisquer Contas de Redes Sociais, o Utilizador
+                compreende que poderemos, de acordo com as nossas Políticas, aceder, disponibilizar e armazenar (se
+                aplicável) qualquer Conteúdo (conforme definido abaixo) que tenha fornecido e armazenado na sua Conta de
+                Redes Sociais ("Conteúdo de Redes Sociais") para que esteja disponível nos e através dos Serviços
+                através da sua Conta. Salvo especificação em contrário nos Termos, todos os Conteúdos de Redes Sociais
+                serão considerados Publicações do Utilizador (conforme definido abaixo) para todos os efeitos dos
+                Termos. Dependendo das Contas de Redes Sociais que escolher e sujeito às definições de privacidade que
+                definiu nessas Contas de Redes Sociais, as informações pessoais que publicar nas suas Contas de Redes
+                Sociais podem estar disponíveis na e através da sua Conta nos Serviços. Tenha em atenção que, se uma
+                Conta de Redes Sociais ou serviço associado ficar indisponível, ou se o nosso acesso a essa Conta de
+                Redes Sociais for terminado pela Rede Social, o Conteúdo de Redes Sociais deixará de estar disponível
+                nos Serviços e através dos mesmos. Pode desativar a ligação entre a sua Conta e as suas Contas de Redes
+                Sociais a qualquer momento, acedendo à secção "Definições" dos Serviços. TENHA EM ATENÇÃO QUE A SUA
+                RELAÇÃO COM OS FORNECEDORES DE REDES SOCIAIS ASSOCIADOS ÀS SUAS CONTAS DE REDES SOCIAIS É EXCLUSIVAMENTE
+                REGIDA PELO(S) SEU(S) ACORDO(S) COM ESSES FORNECEDORES DE REDES SOCIAIS, E RECUSAMOS QUALQUER
+                RESPONSABILIDADE POR INFORMAÇÕES PESSOAIS QUE POSSAM SER FORNECIDAS POR TAIS FORNECEDORES DE REDES
+                SOCIAIS EM VIOLAÇÃO DAS DEFINIÇÕES DE PRIVACIDADE QUE DEFINIU NESSAS CONTAS DE REDES SOCIAIS. Não
+                fazemos qualquer esforço para rever qualquer Conteúdo de Redes Sociais para qualquer finalidade,
+                incluindo, sem limitação, quanto à precisão, legalidade ou não infração, e não somos responsáveis por
+                qualquer Conteúdo de Redes Sociais.</span></p>
+        <p><span id="twoDotFive">2.5</span><span id="twoDotFiveText"> O idioma aplicável dos presentes Termos é a versão
+                do idioma que corresponde ao país/região que escolheu na Lalala Utilities.</span></p>
+        <p><span id="twoDotSix">2.6</span><span id="twoDotSixText"> A versão atual dos presentes Termos será sempre
+                apresentada e o Utilizador está autorizado a imprimir ou guardar cópias eletrónicas.</span></p>
+    </div>
+    <div id="rulesAndRestrictionsDiv">
+        <h5><span id="rulesAndRestrictionsNumber">3.</span><span id="rulesAndRestrictions"> Regras e Restrições</span>
+        </h5>
+        <p><span id="threeDotOne">3.1</span><span id="threeDotOneText"> O Utilizador concorda em utilizar os Serviços
+                para sua própria utilização e não em nome ou para benefício de terceiros, e apenas de uma forma que
+                esteja em conformidade com estes Termos, as Políticas e todas as leis e regulamentos aplicáveis ao
+                Utilizador. Se a sua utilização dos Serviços for proibida por quaisquer leis aplicáveis, não está
+                autorizado a utilizar os Serviços. Não somos responsáveis se utilizar os Serviços de uma forma que viole
+                a lei.</span></p>
+        <p><span id="threeDotTwo">3.2</span><span id="threeDotTwoText"> O Utilizador é responsável por todos os danos
+                causados pela utilização da sua conta por terceiros, a menos que não seja responsável por essa
+                utilização por terceiros. Por isso, tem de proteger a segurança da sua conta e palavra-passe e não
+                partilhá-las com terceiros. Terá de nos notificar imediatamente de qualquer utilização não autorizada ou
+                violação da segurança da sua conta.</span></p>
+        <p><span id="threeDotThree">3.3</span><span id="threeDotThreeText"> Não pode criar múltiplas contas.</span></p>
+        <p><span id="threeDotFour">3.4</span><span id="threeDotFourText"> Quaisquer sorteios, concursos, rifas,
+                inquéritos, jogos ou promoções semelhantes (coletivamente, "Promoções") disponibilizados através dos
+                Serviços poderão ser regidos por regras separadas. Se as regras de uma Promoção estiverem em conflito
+                com os presentes Termos, as regras da Promoção terão precedência.</span></p>
+        <p><span id="threeDotFive">3.5</span><span id="threeDotFiveText"> Ao utilizar os Serviços, o Utilizador concorda
+                e compromete-se a cumprir as nossas Diretrizes da Comunidade e as Diretrizes de Avaliação e
+                compromete-se a não efetuar qualquer ação ou disponibilizar quaisquer Publicações do Utilizador através
+                dos Serviços que possam:</span></p>
+        <p id="threeDotFiveText1">(1) infringir ou violar os direitos de outra pessoa, incluindo direitos de propriedade
+            intelectual;</p>
+        <p id="threeDotFiveText2">(2) violar qualquer um dos presentes Termos, as Políticas, as nossas Diretrizes da
+            Comunidade ou Diretrizes de Avaliação ou as leis e regulamentos aplicáveis;</p>
+        <p id="threeDotFiveText3">(3) contornar ou tentar contornar qualquer um destes Termos, as Políticas ou outras
+            regras relacionadas com os Serviços, incluindo as Promoções;</p>
+        <p id="threeDotFiveText4">(4) constituir publicidade não autorizada ou não solicitada, ou correio eletrónico
+            publicitário não solicitado ou em massa;</p>
+        <p id="threeDotFiveText5">(5) recolher dados pessoais de outros utilizadores ou utilizar quaisquer informações
+            recolhidas a partir dos Serviços;</p>
+        <p id="threeDotFiveText6">(6) envolver qualquer conduta que possa causar uma violação da segurança da sua conta;
+        </p>
+        <p id="threeDotFiveText7">(7) obter a palavra-passe, dados da conta ou outras informações de segurança de outro
+            utilizador;</p>
+        <p id="threeDotFiveText8">(8) utilizar as credenciais de terceiros, ocultar o seu verdadeiro endereço IP ou, de
+            outra forma, fazer-se passar por outra pessoa ou declarar de forma falsa a sua identidade ou a sua afiliação
+            a qualquer pessoa ou entidade;</p>
+        <p id="threeDotFiveText9">(9) violar ou interferir com o funcionamento ou segurança adequados de qualquer rede
+            informática;</p>
+        <p id="threeDotFiveText10">(10) executar qualquer tipo de sistema de resposta automática ou "spam" nos Serviços,
+            qualquer processo que seja executado ou que seja ativado enquanto o Utilizador não está ligado aos Serviços,
+            ou qualquer processo que, de outra forma, interfira com o funcionamento adequado dos Serviços (incluindo
+            aplicar uma carga excessiva sobre a infraestrutura dos Serviços através de sobrecarga, "flooding" ou
+            "bombardeamentos de e-mails", ou provocar a falha dos Serviços);</p>
+        <p id="threeDotFiveText11">(11) prejudicar potencialmente os Serviços, incluindo, entre outras formas, por meio
+            da violação de quaisquer funcionalidades de segurança dos Serviços, da utilização de software manual ou
+            automático ou outros meios de acesso, realizar "crawling", "scraping" ou "spidering" a qualquer página,
+            dados ou parte dos Serviços ou relativamente aos mesmos, ou através da introdução de vírus, worms ou outros
+            tipos de código nocivo semelhante nos Serviços;</p>
+        <p id="threeDotFiveText12">(12) copiar ou armazenar qualquer parte significativa do conteúdo nos Serviços sem o
+            nosso consentimento por escrito;</p>
+        <p id="threeDotFiveText13">(13) descompilar, aplicar engenharia inversa ou obter de outra forma o código fonte
+            ou ideias ou informações subjacentes ou relacionadas com os Serviços;</p>
+        <p id="threeDotFiveText14">(14) envolver a compra de quaisquer produtos que não esteja legalmente autorizado a
+            comprar ou utilizar;</p>
+        <p id="threeDotFiveText15">(15) abusar de quaisquer promoções, descontos ou outros benefícios oferecidos por
+            nós, manipular o preço de quaisquer produtos anunciados ou interferir com os anúncios;</p>
+        <p id="threeDotFiveText16">(16) constituir uma tentativa de fazer qualquer coisa proibida nesta lista, ou
+            permitir, incentivar ou ajudar qualquer terceiro a fazê-lo.</p>
+        <p id="rulesAndRestrictionsText">Para além de quaisquer outras soluções que tenhamos à nossa disposição, uma
+            violação de qualquer um dos pontos anteriores é motivo para:</p>
+        <p id="rulesAndRestrictionsText1">(1) a remoção, restrição ou recusa de publicação de qualquer Publicação do
+            Utilizador;</p>
+        <p id="rulesAndRestrictionsText2">(2) o cancelamento das suas compras de produtos;</p>
+        <p id="rulesAndRestrictionsText3">(3) o cancelamento de Recompensas ou pagamentos devidos por nós;</p>
+        <p id="rulesAndRestrictionsText4">(4) a suspensão, cessação ou outra restrição do seu acesso ou utilização dos
+            Serviços.</p>
+        <p><span id="rulesAndRestrictionsText5">Se tomarmos conhecimento de possíveis violações dos Termos,
+                reservamo-nos o
+                direito de investigar tais violações. Se, na sequência da investigação, considerarmos que ocorreu uma
+                atividade criminosa, reservamo-nos o direito de remeter o assunto para quaisquer autoridades legais
+                aplicáveis e de cooperar com as mesmas. Temos o direito de divulgar quaisquer informações ou materiais
+                sobre
+                ou nos Serviços, incluindo Publicações dos Utilizadores, na nossa posse, relacionados com a sua
+                utilização
+                dos Serviços para (i) cumprir as leis, processos legais ou pedidos governamentais aplicáveis; (ii)
+                aplicar
+                os Termos e as Políticas, (iii) responder a quaisquer reclamações de violação de direitos de terceiros
+                por
+                uma Publicação do Utilizador, (iv) responder aos seus pedidos ao serviço de atendimento ao cliente, ou
+                (v)
+                proteger os nossos direitos, propriedade ou segurança pessoal, dos nossos utilizadores ou do público, e
+                de
+                todos os responsáveis pela aplicação da lei ou outros funcionários do governo, e (vi) conforme previsto
+                de
+                outra forma na </span><a id="underlineButton1" href="/privacyPolicy">Política de Privacidade</a><span
+                id="rulesAndRestrictionsText6">, conforme
+                consideremos razoavelmente necessário ou adequado e desde que essa divulgação esteja em conformidade com
+                as
+                leis aplicáveis, incluindo as leis proteção de dados e de privacidade aplicáveis.</span></p>
+    </div>
+    <div id="privacyDiv">
+        <h5><span id="privacyNumber">4.</span><span id="privacy"> Privacidade</span></h5>
+        <p><span id="fourDotOne">4.1</span><span id="fourDotOneText"> A nossa Política de Privacidade fornece
+                informações sobre a forma como recolhemos, utilizamos e divulgamos as suas informações pessoais quando
+                acede, visita ou utiliza os Serviços. Em relação à sua utilização dos Serviços, reconhece que poderemos
+                recolher, aceder, utilizar, conservar e divulgar as suas informações pessoais (incluindo as informações
+                da sua conta e de utilizador), conforme descrito nos presentes Termos e na nossa Política de
+                Privacidade, que confirma ter lido.</span></p>
+    </div>
+    <div id="communicationsDiv">
+        <h5><span id="communicationsNumber">5.</span><span id="communication"> Comunicações</span></h5>
+        <p><span id="fiveDotOne">5.1</span><span id="fiveDotOneText"> Iremos enviar-lhe comunicações por via eletrónica,
+                tais como e-mails, mensagens de texto, avisos push em dispositivos móveis e avisos e mensagens nos ou
+                através dos Serviços ("Mensagens Push"), quando nos tiver dado a sua permissão para lhe enviar tais
+                Mensagens Push, de acordo com os padrões exigidos pela lei aplicável. O Utilizador reconhece que, quando
+                utiliza a Aplicação, o seu fornecedor de serviços sem fios poder-lhe-á cobrar taxas por dados, SMS e/ou
+                outros serviços de acesso sem fios, incluindo em relação a Mensagens Push. Consulte o seu fornecedor de
+                serviços sem fios para determinar que taxas se aplicam ao seu acesso e utilização dos Serviços,
+                incluindo a receção de Mensagens Push da nossa parte. O Utilizador é o único responsável por quaisquer
+                taxas, custos ou despesas em que incorra ao descarregar, instalar e/ou utilizar os Serviços no seu
+                dispositivo móvel, incluindo a receção de Mensagens Push. Também reconhece e concorda que todos os
+                termos e condições, acordos, avisos, divulgações e outras comunicações e documentos que lhe fornecemos
+                eletronicamente constituem e têm a mesma força jurídica que teriam se tivessem sido disponibilizados em
+                formato papel.</span></p>
+        <p><span id="fiveDotTwo">5.2</span><span id="fiveDotTwoText"> Aceita que podemos comunicar consigo através de
+                qualquer endereço de e-mail ou número de telefone que nos forneça, para: (i) notificar o Utilizador
+                relativamente à sua Conta; (ii) resolver problemas com a sua Conta; (iii) resolver um litígio; (iv)
+                cobrar uma dívida; (v) conhecer as suas opiniões através de inquéritos ou questionários; (vi) notificar
+                o Utilizador relativamente a atualizações relativas a encomendas, pagamentos e entregas; (vii)
+                enviar-lhe SMS de autenticação; ou (viii) conforme necessário, para prestar assistência relativamente à
+                sua Conta ou para aplicar os presentes Termos, as Políticas, as leis e regulamentos aplicáveis ou
+                qualquer outro acordo que possamos ter consigo, em conformidade com as suas permissões, definições e
+                preferências relevantes, conforme aplicável. As tarifas padrão cobradas por SMS aplicadas pelo seu
+                operador de serviços móveis podem aplicar-se às SMS enviadas por nós.</span></p>
+        <p><span id="fiveDotThree">5.3</span><span id="fiveDotThreeText"> Se pretender receber os nossos materiais de
+                marketing através de SMS e alertas no telemóvel ou por e-mail, pode registar-se para os receber. Quando
+                nos tiver dado a sua permissão, sempre que necessário e de acordo com os padrões exigidos por lei,
+                enviar-lhe-emos mensagens promocionais, que podem incluir códigos de acesso únicos, notificações
+                relativas às suas encomendas, as nossas mensagens promocionais e lembretes de carrinho de compras
+                abandonado (ativados através da utilização de cookies que recolhemos conforme descrito nos presentes
+                Termos) para o número de telefone que nos fornecer. A inscrição para um programa não implica a inscrição
+                automática para outro programa. Ser-lhe-á dada a opção de recusar materiais de marketing. A frequência
+                das mensagens varia e os operadoras não são responsáveis por quaisquer atrasos ou mensagens não
+                entregues. Podem aplicar-se taxas de mensagens e utilização de dados. O Utilizador não é obrigado a
+                receber mensagens de texto de marketing como condição para a utilização dos Serviços</span></p>
+        <p><span id="fiveDotFour">5.4</span><span id="fiveDotFourText"> As nossas comunicações consigo podem ser feitas
+                através de um fornecedor de serviços terceiro. O Utilizador reconhece que, sujeito à nossa Política de
+                Privacidade, as suas comunicações connosco ou com os nossos agentes poderão ser gravadas, monitorizadas
+                e armazenadas para fins de controlo de qualidade e formação, ou para proteger os seus interesses, os de
+                terceiros e/ou os nossos.</span></p>
+    </div>
+    <div id="userPublicationsDiv">
+        <h5><span id="userPublicationsNumber">6.</span><span id="userPublications"> Publicações do Utilizador</span>
+        </h5>
+        <p><span id="sixDotOne">6.1</span><span id="sixDotOneText"> A expressão "Publicação do Utilizador" significa
+                qualquer informação publicada, carregada, partilhada ou enviada pelo Utilizador através dos Serviços,
+                incluindo sugestões, comentários, avaliações, classificações, fotografias, vídeos ou outro feedback ou
+                materiais, e que pode ser visualizada por outros utilizadores.</span></p>
+        <p id="userPublicationText">No que diz respeito a todas as Publicações do Utilizador, o Utilizador concede-nos
+            um direito e mundial, totalmente pago, isento de royalties, não exclusivo, transferível e sublicenciável
+            (incluindo quaisquer direitos morais) e uma licença para utilizarmos, licenciarmos, armazenarmos,
+            apresentarmos, reproduzirmos, guardarmos, modificarmos (por exemplo, para garantir que a Publicação do
+            Utilizador é visualizável em diferentes sistemas e dispositivos), criarmos obras derivadas, executarmos
+            publicamente, apresentarmos publicamente, distribuirmos, traduzirmos ou agirmos de qualquer outra forma
+            relativamente a essas Publicações do Utilizador conforme determinemos ser necessário para operarmos,
+            comercializarmos e publicitarmos os Serviços, incluindo para apresentarmos, exibirmos ou executarmos essas
+            Publicações do Utilizador em conformidade com as suas preferências, sempre de acordo com a legislação de
+            proteção de dados aplicável.</p>
+        <p><span id="sixDotTwo">6.2</span><span id="sixDotTwoText"> O Utilizador reconhece e concorda que todas as
+                Publicações do Utilizador (incluindo o nome de utilizador ao abrigo do qual as criou) não são
+                confidenciais e não são sua propriedade (mas excluindo as suas comunicações diretamente com a Lalala
+                Utilities para efeitos de apresentação de uma denúncia ou reclamação ou resolução de problemas com o
+                serviço que serão tratados como confidenciais).</span></p>
+        <p><span id="sixDotThree">6.3</span><span id="sixDotThreeText"> O Utilizador garante que detém ou controla de
+                qualquer outra forma todos os direitos sobre as Publicações do Utilizador e que a nossa utilização de
+                qualquer Publicação do Utilizador não irá infringir nem violar os direitos de qualquer terceiro, nem
+                violar qualquer uma das regras e restrições contidas nestes Termos (incluindo as constantes na Secção 3
+                do presente documento).</span></p>
+        <p><span id="sixDotFour">6.4</span><span id="sixDotFourText"> Não apoiamos as Publicações dos Utilizadores, e as
+                mesmas não representam as nossas opiniões. Renunciamos expressamente a qualquer responsabilidade pelas
+                Publicações dos Utilizadores ou por quaisquer danos resultantes das mesmas. Esperamos que os
+                utilizadores mantenham um elevado nível de integridade ao submeterem Publicações dos Utilizadores que
+                sejam visualizáveis por outros utilizadores, especialmente no que diz respeito a classificações e
+                avaliações de produtos. O Utilizador compromete-se a que as Publicações do Utilizador que sejam
+                visualizáveis por outros utilizadores sejam feitas de boa-fé e baseadas apenas na sua experiência
+                pessoal. O Utilizador também se compromete a indicar claramente se uma Publicação do Utilizador foi
+                patrocinada ou paga de qualquer forma. O Utilizador reconhece que não temos qualquer obrigação de
+                pré-selecionar as Publicações dos Utilizadores, embora nos reservemos o direito de pré-selecionar,
+                recusar, excluir ou remover qualquer Publicação dos Utilizadores. Ao celebrar estes Termos, o Utilizador
+                concede o seu consentimento irrevogável relativamente a uma tal monitorização e moderação. Em caso de
+                pré-triagem, recusa, exclusão ou remoção de quaisquer Publicações do Utilizador, o Utilizador reconhece
+                que o faremos em nosso benefício e não em seu benefício. Sem limitação do acima exposto, teremos o
+                direito de remover quaisquer Publicações dos Utilizadores que violem os Termos ou sejam de outra forma
+                censuráveis.</span></p>
+    </div>
+    <div id="propertyDiv">
+        <h5><span id="propertyNumber">7.</span><span id="property"> Propriedade</span></h5>
+        <p><span id="sevenDotOne">7.1</span><span id="sevenDotOneText"> O Utilizador reconhece e concorda que os
+                materiais apresentados, executados ou disponíveis nos ou através dos Serviços, incluindo, entre outros,
+                textos, gráficos, dados, artigos, fotografias, imagens, ilustrações e Publicações dos Utilizadores
+                (coletivamente, "Conteúdo") podem estar protegidos por leis relativas a direitos de autor e/ou outras
+                leis relativas a propriedade intelectual em todo o mundo. O Utilizador compromete-se a respeitar todos
+                os avisos relativos a direitos de autor, regras relativas a marcas comerciais, informações e restrições
+                contidos no Conteúdo e a não copiar, reproduzir, modificar, traduzir, publicar, difundir, transmitir,
+                distribuir, executar, carregar, apresentar, licenciar, vender ou utilizar de qualquer outra forma, e
+                para qualquer fim, qualquer Conteúdo que não seja propriedade do Utilizador sem o consentimento prévio
+                do proprietário desse Conteúdo.</span></p>
+        <p><span id="sevenDotTwo">7.2</span><span id="sevenDotTwoText"> Respeitamos os direitos de propriedade
+                intelectual de terceiros e reservamo-nos o direito de eliminar ou desativar Conteúdo alegadamente em
+                violação dos direitos de propriedade intelectual de outra pessoa e de encerrar as contas dos alegados
+                infratores.</span></p>
+        <p><span id="sevenDotThree">7.3</span><span id="sevenDotThreeText"> O Utilizador reconhece e concorda que somos
+                proprietários dos Serviços ou que os licenciamos. O Utilizador compromete-se a não modificar, publicar,
+                transmitir, participar na transferência ou venda de, reproduzir, criar obras derivadas com base em, ou
+                explorar de qualquer outra forma qualquer um dos Serviços, exceto conforme expressamente previsto nesta
+                Secção 7.</span></p>
+        <p><span id="sevenDotFour">7.4</span><span id="sevenDotFourText"> Sujeito ao cumprimento, por parte do
+                Utilizador, dos presentes Termos e de todas as políticas, regras e diretrizes aplicáveis, e ao
+                pagamento, pelo Utilizador, de quaisquer taxas aplicáveis, nós ou os nossos fornecedores de conteúdos
+                concedemos-lhe uma licença limitada, não exclusiva, intransmissível e não sublicenciável para aceder e
+                utilizar os Serviços de forma pessoal e não comercial, com a única finalidade de utilizar a Lalala
+                Utilities. Todos os direitos não expressamente concedidos ao Utilizador nos presentes Termos ou em
+                quaisquer políticas ou diretrizes são reservados e retidos por nós ou pelos nossos licenciantes,
+                fornecedores, editores, titulares de direitos ou outros fornecedores de conteúdos. As licenças
+                concedidas por nós serão revogadas se o Utilizador não cumprir estes Termos ou quaisquer políticas,
+                regras ou diretrizes aplicáveis.</span></p>
+        <p><span id="sevenDotFive">7.5</span><span id="sevenDotFiveText"> O Utilizador não pode utilizar comercialmente
+                quaisquer informações fornecidas nos Serviços, nem utilizar os Serviços em benefício de outra empresa,
+                salvo se expressa e previamente permitido por nós. O Utilizador não pode oferecer ou publicitar os seus
+                produtos ou serviços a outros utilizadores, ou contactá-los, de qualquer forma, para fins de emprego,
+                contratação ou qualquer outro fim não relacionado com os Serviços facilitados através da Lalala
+                Utilities. Se violar a presente disposição, reservamo-nos o direito de recusar o serviço, encerrar
+                contas e/ou cancelar transações de compra ao nosso critério.</span></p>
+    </div>
+    <div id="riskAndResponsabilityDiv">
+        <h5><span id="riskAndResponsabilityNumber">8.</span><span id="riskAndResponsability"> Responsabilidades; Riscos
+                associados a Terceiros</span></h5>
+        <p><span id="eightDotOne">8.1</span><span id="eightDotOneText"> O Utilizador reconhece e concorda que qualquer
+                Conteúdo publicado publicamente ou transmitido em privado através dos Serviços é da exclusiva
+                responsabilidade da pessoa que publicou ou transmitiu esse Conteúdo. O Utilizador acede e utiliza o
+                Conteúdo, e interage com outros utilizadores, por sua conta e risco. Não somos responsáveis por
+                quaisquer erros, omissões e imprecisões no Conteúdo. Não controlamos o Conteúdo e não temos o dever de
+                tomar quaisquer medidas relativamente à forma como o Utilizador possa interpretar ou utilizar o Conteúdo
+                ou reagir ao mesmo. Não temos qualquer obrigação de monitorizar proativamente o Conteúdo, não aprovamos
+                ou apoiamos qualquer Conteúdo e não prestamos quaisquer declarações ou garantias relativamente ao mesmo.
+                O Utilizador compreende também que não podemos garantir as identidades dos utilizadores com os quais
+                interage durante a utilização dos Serviços e que não somos responsáveis pelo acesso dos utilizadores aos
+                Serviços. </span></p>
+        <p><span id="eightDotTwo">8.2</span><span id="eightDotTwoText"> O Utilizador é responsável por qualquer Conteúdo
+                com que contribua, de qualquer forma, para os Serviços e declara e garante que tem todos os direitos
+                para contribuir com esse Conteúdo para os Serviços de tal forma.</span></p>
+        <p><span id="eightDotThree">8.3</span><span id="eightDotThreeText"> Os Serviços poderão conter links ou ligações
+                para websites ou serviços de terceiros que não são nossa propriedade nem controlados por nós. Não temos
+                qualquer controlo sobre, nem assumimos qualquer responsabilidade pelo conteúdo, pela precisão, pelas
+                políticas de privacidade ou pelas práticas ou opiniões expressas em quaisquer websites ou serviços de
+                terceiros. Além disso, não iremos, nem poderemos, monitorizar, validar, censurar ou editar o conteúdo de
+                qualquer website ou serviço de terceiros. O Utilizador reconhece e concorda que não somos responsáveis
+                por quaisquer riscos resultantes do seu acesso ou utilização de quaisquer websites ou serviços de
+                terceiros. Recomendamos que tenha cuidado ao sair dos Serviços e que leia os termos de utilização e a
+                política de privacidade de cada website ou serviço de um terceiro que visite ou utilize. </span></p>
+        <p><span id="eightDotFour">8.4</span><span id="eightDotFourText"> As suas interações com outros utilizadores,
+                outras entidades ou pessoas em resultado da sua utilização dos Serviços, incluindo comunicações,
+                pagamentos, desempenhos e entregas, são exclusivamente entre si e esses terceiros; no entanto,
+                reservamo-nos o direito de, embora não tenhamos qualquer obrigação de, intervir relativamente a tais
+                interações. O Utilizador deve levar a cabo qualquer investigação e/ou procurar o aconselhamento
+                profissional que considere necessário ou adequado antes de proceder com qualquer interação com qualquer
+                terceiro tal. O Utilizador reconhece e concorda que não somos responsáveis por quaisquer perdas ou danos
+                resultantes de tais interações. O Utilizador concorda que não incorreremos em qualquer responsabilidade
+                decorrente de tais interações.</span></p>
+        <p><span id="eightDotFive">8.5</span><span id="eightDotFiveText"> Providenciar-se a venda de artigos anunciados
+                por terceiros, ou o pagamento de taxas a terceiros fora do contexto da Lalala Utilities, com o objetivo
+                de se contornar a obrigação de se pagar a taxa requerida por produtos adquiridos através dos Serviços
+                constitui uma violação substancial dos presentes Termos.</span></p>
+    </div>
+    <div id="responsabilityRenunceDiv">
+        <h5><span id="responsabilityRenunceNumber">9.</span><span id="responsabilityRenunce"> Renúncia de
+                responsabilidade</span></h5>
+        <p><span id="nineDotOne">9.1</span><span id="nineDotOneText"> Não somos responsáveis por quaisquer reclamações
+                ou litígios que possam surgir entre os utilizadores da Lalala Utilities. Se existir um litígio entre si
+                e outro utilizador, ou qualquer terceiro na Lalala Utilities, não temos qualquer obrigação de nos
+                envolvermos.</span></p>
+    </div>
+    <div id="shoppingDiv">
+        <h5><span id="shoppingNumber">10.</span><span id="shopping"> Compras</span></h5>
+        <p><span id="tenDotOne">10.1</span><span id="tenDotOneText"> O Utilizador é responsável por ler a ficha completa
+                do Produto antes de adquirir um Produto. Ao confirmar a sua compra, aceita pagar todas as taxas,
+                impostos, custos de envio e outros montantes aplicáveis associados à sua compra. Além disso, na medida
+                do aplicável, o Utilizador reconhece a sua responsabilidade por quaisquer impostos sobre vendas, IVA e
+                direitos aduaneiros. Quando efetua uma encomenda e esta lhe é enviada, a titularidade do produto é-lhe
+                transferida após a entrega do produto à transportadora. O Utilizador concorda que, quando aplicável, irá
+                agir como importador dos produtos comprados e autoriza-nos por este meio a nomear um agente de expedição
+                para agir como seu representante direto e pagar quaisquer impostos sobre vendas, IVA e direitos
+                aduaneiros em seu nome. Tenha em atenção que o imposto sobre vendas, o IVA, os direitos aduaneiros e
+                encargos semelhantes cobrados no momento da compra são valores estimados e podem estar sujeitos a
+                alterações, dependendo da legislação aplicável. Se forem avaliados montantes adicionais, o Utilizador é
+                responsável por estes montantes. Não seremos responsabilizáveis se um produto sofrer um atraso ou o seu
+                desalfandegamento for recusado em resultado do não pagamento pelo Utilizador de tais montantes.</span>
+        </p>
+        <p><span id="tenDotTwo">10.2</span><span id="tenDotTwoText"> Embora nos esforcemos, na Lalala Utilities, por
+                fornecer informações precisas, poderão ocorrer erros tipográficos, imprecisões ou omissões relacionados
+                com preços, descrições de produtos, disponibilidade e ofertas. Sujeito à legislação aplicável,
+                reservamo-nos o direito de corrigir quaisquer erros, imprecisões ou omissões e de alterar ou modificar
+                informações ou cancelar encomendas ou partes de encomendas, se qualquer informação sobre a Lalala Utilities for
+                imprecisa, a qualquer momento e sem aviso prévio, incluindo após a sua encomenda ter sido registada ou
+                após a receção, por sua parte, de uma confirmação de encomenda ou aviso de envio. O Utilizador não deve
+                depender do preço com desconto na sua decisão de compra. Se comparar preços for importante para a sua
+                decisão de compra, deve fazer a sua própria comparação antes de efetuar uma compra.</span></p>
+        <p><span id="tenDotThree">10.3</span><span id="tenDotThreeText"> Verifique cuidadosamente todas as descrições e
+                restrições relativas ao produto em que está interessado antes de efetuar a sua encomenda. Se tiver
+                alguma circunstância especial (por exemplo, uma condição médica ou de saúde e/ou uma necessidade
+                especial) que possa afetar ou ser afetada pelo produto que pretende adquirir, é da sua exclusiva
+                responsabilidade informar-nos antes de efetuar a encomenda.</span></p>
+        <p><span id="tenDotFour">10.4</span><span id="tenDotFourText"> Envidamos esforços razoáveis para garantir que a
+                apresentação a cores dos produtos na Lalala Utilities é o mais precisa possível. No entanto, não podemos
+                garantir que a apresentação de qualquer cor no seu monitor será uma representação exata da cor do
+                produto que selecionou para compra.</span></p>
+        <p><span id="tenDotFive">10.5</span><span id="tenDotFiveText"> O Utilizador reconhece que os produtos estão em
+                conformidade com a transação ou a compra prevista se: (i) satisfizerem a descrição fornecida na Lalala
+                Utilities e possuírem as qualidades apresentadas na Lalala Utilities; (ii) forem próprias para os fins
+                para os quais são normalmente utilizadas mercadorias deste tipo; e (iii) forem de qualidade e de
+                desempenho normais em mercadorias do mesmo tipo e que possam razoavelmente ser esperadas. A legislação
+                nacional do consumidor fornece-lhe uma garantia legal de que os Serviços estarão em conformidade com a
+                lei. Ao abrigo desta garantia legal, seremos responsáveis por qualquer falta de conformidade dos
+                Serviços. Poderá ter o direito de, ao abrigo da legislação local, (a) solicitar a conformidade dos
+                Serviços, ou (b) resolver o contrato.</span></p>
+        <p><span id="tenDotSix">10.6</span><span id="tenDotSixText"> Para fazer compras, tem de fornecer informações
+                precisas e completas relativas a um método de pagamento válido, como um cartão de crédito, que tenha
+                autorização para usar. Terá de atualizar imediatamente a sua conta com quaisquer alterações relacionadas
+                com o seu método de pagamento. AO FORNECER INFORMAÇÕES DE UM MÉTODO DE PAGAMENTO E AO APROVAR UM
+                PAGAMENTO DE COMPRA ESPECÍFICO, O UTILIZADOR AUTORIZA-NOS A NÓS OU AOS NOSSOS AGENTES OU PROCESSADORES
+                DO SERVIÇOS DE PAGAMENTO A COBRAR NO MÉTODO DE PAGAMENTO: (A) MONTANTES DEVIDOS PELOS PRODUTOS
+                ESPECÍFICOS QUE PRETENDE ADQUIRIR; (B) TODOS E QUAISQUER CUSTOS ALFANDEGÁRIOS, IMPOSTOS E CUSTOS DE
+                ENVIO APLICÁVEIS; E (C) QUAISQUER OUTROS ENCARGOS INCORRIDOS E RELACIONADOS COM A UTILIZAÇÃO DOS
+                SERVIÇOS, RESUMIDOS ANTES DA SUA APROVAÇÃO DO PAGAMENTO. Poderemos recusar, congelar ou reter a sua
+                transação por qualquer motivo, incluindo por suspeita de fraude, branqueamento de capitais e cumprimento
+                de sanções, ou se acreditarmos que a sua transação representa um risco para nós ou para
+                terceiros.</span></p>
+        <p><span id="tenDotSeven">10.7</span><span id="tenDotSevenText"> Os Processadores de Pagamentos poderão
+                cobrar-lhe taxas pelas suas compras efetuadas através da Lalala Utilities. Essas taxas de processamento
+                ser-lhe-ão divulgadas através da Lalala Utilities. A utilização dos Serviços e o processamento de
+                pagamentos fornecido pelo Processador de Pagamentos estão sujeitos ao seu contrato com o Processador de
+                Pagamentos, conforme ocasionalmente modificado. Como condição de utilização dos serviços de pagamento,
+                deve fornecer informações precisas e completas e autorizar-nos a partilhar essas informações com o
+                Processador de Pagamentos.</span></p>
+        <p><span id="tenDotEight">10.8</span><span id="tenDotEightText"> As suas obrigações de pagamento ficam
+                totalmente cumpridas assim que o pagamento do preço acordado for recebido.</span></p>
+    </div>
+    <div id="refoundsDiv">
+        <h5><span id="refoundsNumber">11.</span><span id="refounds">  Reembolsos, Trocas e Afins</span></h5>
+        <p><span id="elevenDotOne">11.1</span><span id="elevenDotOneText"> Podemos ajudá-lo, por meio do nosso serviço de atendimento ao cliente, com pagamentos, devoluções, reembolsos e outras áreas relacionadas com a sua compra de produtos.</span></p>
+        <p><span id="elevenDotTwo">11.2</span><span id="elevenDotTwoText"> Queremos que fique satisfeito com as suas compras efetuadas através dos Serviços. Para qualquer produto comprado na Lalala Utilities, poderá ter direito a uma devolução e reembolso.</span></p>
+        <p id="refoundsText"> Salvo indicação em contrário, o reembolso não cobre os custos alfandegários, impostos ou quaisquer outros custos de devolução em que possa incorrer no processo de reembolso.</p>
+    </div>
+    <div id="rewardsDiv">
+        <h5><span id="rewardsNumber">12.</span><span id="rewards"> Recompensas</span></h5>
+        <p><span id="twelveDotOne">12.1</span><span id="twelveDotOneText"> Poderá receber créditos, cupões, dinheiro, presentes ou outros tipos de recompensas pela utilização dos Serviços (coletivamente, "Recompensas"). Algumas recompensas só podem ser utilizadas para descontos em compras elegíveis ou no pagamento das mesmas nos ou através dos Serviços (mas tenha em atenção que nem todos os produtos poderão ser elegíveis) e não podem ser resgatadas em dinheiro, exceto em jurisdições onde tal seja exigido por lei. Deve ler atentamente as informações e regras aplicáveis relativamente a diferentes tipos de recompensas.</span></p>
+    </div>
+    <div id="stopRelationsDiv">
+        <h5><span id="stopRelationsNumber">13.</span><span id="stopRelations">  Terminar a nossa relação</span></h5>
+        <p><span id="thirteenDotOne">13.1</span><span id="thirteenDotOneText"> O Utilizador tem liberdade para deixar de utilizar os Serviços a qualquer momento. Também temos a liberdade de terminar ou suspender a utilização dos Serviços ou da sua conta, caso viole os presentes Termos ou as Políticas, conforme determinado por nós, agindo de forma razoável. Mesmo após a sua utilização dos Serviços ser revogada ou suspensa, estes Termos permanecerão aplicáveis contra si, e qualquer montante não pago que nos deva continuará a ser devido.</span></p>
+        <p><span id="thirteenDotTwo">13.2</span><span id="thirteenDotTwoText"> Se a sua conta for encerrada, todo o Conteúdo e Recompensas associados à sua conta serão perdidos e cancelados. Deve tentar utilizar quaisquer Recompensas restantes antes da data em que um tal encerramento se torne efetivo.</span></p>
+        <p><span id="thirteenDotThree">13.3</span><span id="thirteenDotThreeText"> Todas as disposições dos Termos que, pela sua natureza, devam subsistir subsistirão à revogação destes Termos, incluindo, entre outras, disposições relativas a propriedade, declarações de isenção de garantia e limitações de responsabilidade.</span></p>
+    </div>
+    <div id="responsabilityLimitationsDiv">
+        <h5><span id="responsabilityLimitationsNumber">14.</span><span id="responsabilityLimitations">  LIMITAÇÃO DE RESPONSABILIDADE</span></h5>
+        <p><span id="fourteenDotOne">14.1</span><span id="fourteenDotOneText"> Apenas seremos responsáveis perante o Utilizador relativamente à nossa obrigação contratual de prestação dos Serviços. Em caso algum seremos responsáveis por quaisquer ações ou omissões de terceiros.</span></p>
+        <p><span id="fourteenDotTwo">14.2</span><span id="fourteenDotTwoText"> A nossa responsabilidade perante o Utilizador é regida pelas seguintes regras:</span></p>
+        <p id="fourteenDotTwoText1">(1) Assumimos responsabilidade ilimitada por danos causados deliberadamente ou por negligência grosseira nossa, dos nossos funcionários e dos nossos agentes indiretos, bem como em caso de não divulgação fraudulenta de incumprimentos, garantias explícitas e danos resultantes de lesões pessoais (à vida, corporais e à saúde).</p>
+        <p id="fourteenDotTwoText2">(2) Só seremos responsáveis por outros danos se estes resultarem de uma violação de uma obrigação que tem de ser respeitada para tornar possível o devido cumprimento do contrato e em cujo cumprimento a outra parte no contrato pode normalmente confiar. Ao mesmo tempo, a nossa responsabilidade por tais outros danos limita-se aos danos considerados normais para este tipo de contrato e previsíveis. Não somos responsáveis por quaisquer perdas imprevisíveis. Perdas imprevisíveis são perdas inesperadas cujo surgimento não era evidente e para as quais o Utilizador não nos advertiu antes de celebrar o presente Acordo. As possíveis responsabilidades de acordo com a lei de responsabilidade por produtos não são afetadas. Qualquer responsabilidade adicional é excluída.</p>
+        <p id="fourteenDotTwoText3">(3) Não garantimos nem assumimos responsabilidade por obrigações decorrentes de contratos facilitados por terceiros.</p>
+        <p id="fourteenDotTwoText4">(4) Além disso, não seremos responsáveis pela precisão, fiabilidade ou integridade do Conteúdo fornecido por nós sem custos na Lalala Utilities ou quaisquer danos que possam resultar de tal Conteúdo.</p>
+    </div>
+    <div id="indmenizationDiv">
+        <h5><span id="indemnizationNumber">15.</span><span id="indemnization"> Indemnização</span></h5>
+        <p><span id="fifteenDotOne">15.1</span><span id="fifteenDotOneText"> O Utilizador concorda em indemnizar-nos contra todas e quaisquer reclamações apresentadas por outros utilizadores ou terceiros contra nós com base numa violação dos respetivos direitos decorrente da utilização dos Serviços por parte do Utilizador ou da violação destes Termos pelo Utilizador. Ao indemnizar-nos ao abrigo desta Secção, o Utilizador suportará os nossos custos de defesa jurídica necessária. Tal não se aplica se o Utilizador não for responsável por tal reclamação. No caso de uma reclamação indemnizada ao abrigo desta Secção 15, o Utilizador deve fornecer-nos imediatamente e com precisão todas as informações necessárias para a análise das reclamações e uma defesa.</span></p>
+    </div>
+    <div id="applicationsStoreDiv">
+        <h5><span id="applicationsStoreNumber">16.</span><span id="applicationsStore"> Lojas de Aplicações</span></h5>
+        <p><span id="sixteenDotOne">16.1</span><span id="applicationLicence"> Licença da Aplicação.</span><span id="sixteenDotOneText"> Sujeito à sua conformidade com os Termos, concedemos-lhe uma licença limitada, não exclusiva, não transferível, não sublicenciável e revogável para descarregar, instalar e utilizar uma cópia da aplicação móvel Lalala Utilities ("Aplicação") num dispositivo ou computador do qual seja proprietário ou que controle. Além disso, no que diz respeito a qualquer Aplicação acedida através ou descarregada a partir da Apple App Store (uma "Aplicação com Origem na App Store"), o Utilizador apenas irá utilizar a Aplicação com Origem na App Store (a) num produto da marca Apple que execute o iOS (sistema operativo proprietário da Apple) e (b) conforme permitido pelas "Regras de Utilização" definidas nos Termos de Serviço da Apple App Store. Não obstante a primeira frase desta secção, no que diz respeito a qualquer Aplicação com origem na App Store ou a qualquer Aplicação acedida através da ou descarregada a partir da Google Play Store (uma "Aplicação com origem no Google Play"), o Utilizador poderá ter direitos adicionais relativamente ao acesso e à utilização da Aplicação aplicáveis à compra em volume ou através da Partilha Familiar em Produtos da marca Apple ou, numa base partilhada, dentro do seu grupo familiar designado, sujeito aos termos da Apple ou da Google aplicáveis e às suas definições associadas.</span></p>
+        <p><span id="sixteenDotTwo">16.2</span><span id="storeApplications"> Lojas de Aplicações.</span><span id="sixteenDotTwoText">  O Utilizador reconhece e concorda que a disponibilidade da Aplicação e dos Serviços depende da entidade terceira de quem o Utilizador recebeu a licença da Aplicação, como, por exemplo, a Apple App Store ou o Google Play (cada, uma "Loja de Aplicações"). O Utilizador reconhece que os Termos são acordados entre si e nós e não com a Loja de Aplicações. Nós, e não a App Store, somos os únicos responsáveis pelos Serviços, incluindo a Aplicação, os conteúdos dos mesmos, a manutenção e os serviços de atendimento e respetiva garantia, bem como quaisquer reivindicações relacionadas com os mesmos (por exemplo, responsabilidade do produto, conformidade legal ou violação da propriedade intelectual). Para utilizar a Aplicação, o Utilizador tem de ter acesso a uma rede sem fios e concorda em pagar todas as taxas associadas a esse acesso. O Utilizador também concorda em pagar quaisquer taxas (se existentes) cobradas pela Loja de Aplicações em conexão com os Serviços, incluindo a Aplicação. O Utilizador concorda em cumprir, e a sua licença de utilização da Aplicação está condicionada à sua conformidade com todos os termos de acordo impostos pela Loja de Aplicações aplicável ao utilizar qualquer Serviço, incluindo a Aplicação. O Utilizador reconhece que a Loja de Aplicações (e as respetivas subsidiárias) são beneficiários terceiros dos Termos e têm o direito de os aplicar.</span></p>
+    </div>
+    <div id="generalDiv">
+        <h5><span id="generalNumber">17.</span><span id="general"> Geral</span></h5>
+        <p><span id="seventeenDotOne">17.1</span><span id="attribution"> Atribuição.</span><span id="seventeenDotOneText"> O Utilizador não pode atribuir, delegar ou transferir os presentes Termos, ou os respetivos direitos e obrigações ao abrigo do mesmo, a qualquer outra pessoa, seja de que forma for (por aplicação da lei ou de outra forma), sem o nosso consentimento prévio por escrito, e qualquer tentativa de cessão, subcontratação, delegação ou transferência que viole o disposto acima será nula e sem efeito. Poderemos transferir, ceder ou delegar os presentes Termos e os seus direitos e obrigações ao abrigo dos mesmos a qualquer outra pessoa sem o seu consentimento.</span></p>
+        <p><span id="seventeenDotTwo">17.2</span><span id="forceMajeure"> Força Maior.</span><span id="seventeenDotTwoText"> Não seremos responsáveis por qualquer atraso ou incumprimento resultante de causas fora do nosso controlo razoável, incluindo, entre outras, casos fortuitos, guerra, terrorismo, motins, embargos, atos das autoridades civis ou militares, incêndios, inundações, acidentes, pandemias, greves, ou escassez de serviços de transporte, combustível, energia, mão de obra ou materiais.</span></p>
+        <p><span id="seventeenDotThree">17.3</span><span id="lawChoice"> Escolha da lei.</span><span id="seventeenDotThreeText"> Se residir num país da União Europeia, os presentes Termos e qualquer litígio de qualquer tipo que possa surgir entre si e nós ao abrigo do presente documento serão regidos pelas leis desse país. Se residir num país fora da União Europeia, os presentes Termos e qualquer litígio de qualquer tipo que possa surgir entre si e nós ao abrigo do presente documento serão regidos pelas leis de Portugal. A Convenção das Nações Unidas sobre os Contratos de Compra e Venda Internacional de Mercadorias não se aplica ao contrato entre si e nós ou a estes Termos.</span></p>
+        <p><span id="seventeenDotFour">17.4</span><span id="onlineResolution"> Resolução de litígios online.</span><span id="seventeenDotFourText"> A Comissão Europeia oferece uma plataforma na Internet para a resolução de litígios em linha (a "plataforma de RLL"). Atualmente, a plataforma de RLL está disponível no seguinte link: http://ec.europa.eu/consumers/odr. Não estamos dispostos nem somos obrigados a participar em processos de resolução de litígios perante organismos de arbitragem do consumo, na medida em que o Serviço ou a Aplicação se enquadrem no âmbito deste regulamento.</span></p>
+        <p><span id="seventeenDotFive">17.5</span><span id="warning"> Aviso.</span><span id="seventeenDotFiveText"> O Utilizador reconhece e concorda que poderemos notificá-lo através de e-mail utilizando o endereço de e-mail mais recente que nos forneceu, o que constitui um aviso eficaz. Por conseguinte, o Utilizador é responsável por manter as suas informações de endereço de e-mail atualizadas. Pode notificar-nos através do envio de um e-mail para Lalalautilities2024@hotmail.com</span></p>
+        <p><span id="seventeenDotSix">17.6</span><span id="renunce1"> Renúncia.</span><span id="seventeenDotSixText"> A nossa incapacidade de responder a uma violação pelo Utilizador ou por terceiros não renuncia ao nosso direito de agir relativamente a violações subsequentes ou semelhantes.</span></p>
+        <p><span id="seventeenDotSeven">17.7</span><span id="divisibility"> Divisibilidade.</span><span id="seventeenDotSevenText">  Se qualquer disposição dos presentes Termos for considerada inaplicável ou inválida, essa disposição será limitada ou eliminada, na medida do mínimo necessário, de modo a que os presentes Termos permaneçam em pleno vigor e efeito e aplicáveis.</span></p>
+        <p><span id="seventeenDotEight">17.8</span><span id="thirdsBeneficiaries"> Beneficiários Terceiros.</span><span id="seventeenDotEightText"> Não existem beneficiários terceiros previstos nos presentes Termos.</span></p>
+        <p><span id="seventeenDotNine">17.9</span><span id="integralAgreement"> Acordo Integral.</span><span id="seventeenDotNineText"> Os presentes Termos são o acordo final, integral e exclusivo das partes no que diz respeito ao seu objeto e substituem e reúnem todas as discussões anteriores entre as partes no que diz respeito ao referido objeto.</span></p>
+    </div>
+    <!-- Adicione o jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/termsAndConditions.js"></script>
+</body>
+
+<footer>&copy;José Lúcio</footer>
+
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lalala 3 Utilities</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/privacyPolicy.css" type="text/css">
+    <link rel="icon" type="image/png" href="images/Lalala logo.jpg">
+</head>
+<header class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/HomepageUser">
+                <img src="images/Lalala logo.jpg" alt="Logo" width="220" height="110">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a id="homeLink" class="nav-link" href="/homePageUser">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="homeLink1" class="nav-link" href="/homePageAdmin">Início</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a id="homeLink2" class="nav-link" href="/">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="aboutLink" class="nav-link" href="/aboutUser">Sobre nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="aboutLink1" class="nav-link" href="/about">Sobre nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="servicesLink" class="nav-link" href="/servicesUser">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="servicesLink1" class="nav-link" href="/services">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="contactLink" class="nav-link" href="/contactUser">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="contactLink1" class="nav-link" href="/contact">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="accountLink" class="nav-link" href="/account">Conta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="privacyPoliticsLink" class="nav-link" href="/privacyPolicy">Política de Privacidade</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="termsAndConditionsLink" class="nav-link" href="/termsAndConditions">Termos e
+                            condições</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="adminServicesLink" class="nav-link" href="/adminServices">Serviços Admin</a>
+                    </li>
+                </ul>
+            </div>
+
+            <input type="radio" id="portuguese" name="language" onclick="changeLanguage('pt')" value="portuguese"
+                checked>
+            <label for="portuguese">PT</label>
+
+            <input type="radio" id="english" name="language" onclick="changeLanguage('en')" value="english">
+            <label for="english">ENG</label>
+            <a class="shopping-cart" href="/cart">
+                <i class="fas fa-shopping-cart shopping-icon"></i>
+                <div class="cart-item-count-container">
+                    <span id="cartItemCount" class="cart-item-count-circle"></span>
+                    <!-- Exemplo de número de itens no carrinho -->
+                </div>
+            </a>
+            <a class="profile-button" href="/account">
+                <i class="fas fa-user profile-icon"></i>
+            </a>
+            <a class="logout-button" href="">
+                <i class="fas fa-sign-out-alt logout-icon"></i>
+            </a>
+            <a href="/login"><button class="btn btn-primary" id="Login">Entrar</button></a>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <h3 id="bodyTitle"><span>LALALA UTILITIES | </span><span class="privacyPolicy1">Política de Privacidade</span></h3>
+    <p id="lastUpdate">Última atualização: 06 de Junho de 2024</p>
+    <div class="index">
+        <h5 id="indice">Índice</h5>
+        <a href="#infoRecovDiv" id="infoRecovText">- Que informações recolhemos?</a><br>
+        <a href="#useInfoDiv" id="useInfoText">- Como e por que motivo utilizamos as suas informações</a><br>
+        <a href="#shareInfoDiv" id="shareInfoText">- Como e por que motivo partilhamos as suas informações</a><br>
+        <a href="#rightsOptionsDiv" id="rightsOptionsText">- Os seus direitos e opções</a><br>
+        <a href="#globalTranferDiv" id="globalTransferText">- As nossas Operações globais e Transferências de
+            dados</a><br>
+        <a href="#dataProtectionDiv" id="dataProtectionText">- Regulamento Geral sobre a Proteção de Dados da União
+            Europeia e leis de proteção de dados de Portugal – base jurídica</a><br>
+        <a href="#kidsDiv" id="kidsText">- Crianças</a><br>
+        <a href="#securityDiv" id="securityText">- Segurança e retenção de dados</a><br>
+        <a href="#policyChangeDiv" id="policyChangeText">- Alterações à Política de privacidade</a><br>
+        <a href="#contactUs1Div" id="contactUs1Text">- Contacte-nos</a><br>
+    </div>
+    <p id="infoText1">Esta Política de Privacidade descreve a forma como a Lalala Utilities Limited, uma empresa registada em Portugal («Lalala Utilities», «nós», «nos» ou «nosso») trata as informações pessoais relativas a pessoas localizadas na União Europeia (UE), no Espaço Económico Europeu (EEE), no Reino Unido (RU) e na Suíça que recolhemos através das nossas propriedades digitais que remetem para a presente Política de Privacidade, incluindo o nosso website (www.lalala.3utilities.com), a aplicação móvel da Lalala Utilities (coletivamente, o «Serviço») e outras atividades, conforme descrito nesta Política de Privacidade. Na Lalala Utilities, preocupamo-nos muito com a privacidade. Esforçamo-nos por ser transparentes relativamente às nossas práticas de privacidade, incluindo a forma como tratamos as suas informações pessoais. Esta Política de Privacidade explica como recolhemos, utilizamos, partilhamos e tratamos as informações pessoais dos utilizadores relacionadas com o nosso Serviço. Nesta Política de Privacidade, também explicamos os direitos que os indivíduos afetados pelo nosso tratamento de dados podem ter em relação aos seus Dados Pessoais.</p>
+    <p id="infoText2">Para efeitos da presente Política de privacidade, "Dados pessoais" tem o significado indicado no Regulamento Geral de Proteção de Dados ("RGPD"), ou seja, qualquer informação relacionada com uma pessoa singular identificada ou identificável (o "Titular dos dados").</p>
+    <p id="infoText3">Responsável pelo Tratamento de Dados: Se estiver localizado na UE, no EEE, no Reino Unido ou na Suíça, a Lalala Utilities Limited, uma empresa portuguesa, é o fornecedor de serviços e o responsável pelo tratamento de dados relativamente às suas informações pessoais.</p>
+    <div id="infoRecovDiv">
+        <h2 id="infoRecov">Que informações recolhemos?</h2>
+        <p id="infoText">No decurso do fornecimento e melhoria dos nossos produtos e serviços, recolhemos as suas
+            informações pessoais para os fins descritos na presente Política de Privacidade. Seguem-se os tipos de
+            informações pessoais que recolhemos:</p>
+        <p id="infoOfUser">Informações que o Utilizador fornece</p>
+        <p id="createAccount">Quando criar uma conta, efetuar uma encomenda ao finalizar a compra, contactar-nos
+            diretamente ou utilizar o Serviço, poderá fornecer algumas ou todas as seguintes informações:</p>
+        <p><span id="perfilAndAccount">Conta e perfil.</span><span id="perfilAndAccountText"> Para criar e gerir a sua
+                conta Lalala Utilities, poderemos recolher o seu número de telemóvel ou endereço de e-mail como as
+                credenciais de início de sessão para a sua conta.</span></p>
+        <p><span id="shopping">Compras.</span><span id="shoppingText"> Para concluir transações e processar encomendas,
+                recolhemos dados relacionados com a sua encomenda no Serviço, informações de pagamento necessárias para
+                concluir a transação (por exemplo, número de cartão de pagamento ou outras informações de pagamento de
+                terceiros necessárias para o pagamento), a sua morada de envio (por exemplo, cidade, estado, país de
+                residência, código postal) e informações de contacto do destinatário (por exemplo, nome, número de
+                telemóvel). Também recolhemos a sua região com base no país.</span></p>
+        <p><span id="customerService">Atividade de atendimento ao cliente.</span><span id="customerServiceText"> Quando
+                comunicar com a nossa equipa de serviço de atendimento ao cliente através de funções de atendimento ao
+                cliente, redes sociais ou qualquer outro meio, iremos recolher o seu histórico de comunicações connosco
+                num esforço contínuo para melhorar o serviço e o atendimento ao cliente.</span></p>
+        <p><span id="contentCustomer">Conteúdo gerado pelo Utilizador.</span><span id="contentCustomerText"> Como
+                comentários, perguntas, mensagens e outros conteúdos ou informações gerados, transmitidos ou
+                disponibilizados de outra forma no Serviço, bem como metadados associados.</span></p>
+        <p><span id="eventParticipation">Promoção e participação no evento.</span><span id="eventParticipationText">
+                Recolhemos informações que partilha ativamente quando participa num concurso, promoção ou inquérito,
+                tais como informações de contacto fornecidas quando participa num sorteio,
+                concurso ou oferta através do Serviço. Fazemos isso para notificá-lo de
+                uma vitória, para verificar a sua identidade e/ou para enviar-lhe um prémio.
+                Em alguns casos, poderemos necessitar de informações adicionais como parte do processo
+                de participação, como a seleção do prémio pretendido. Tais sorteios
+                e concursos são voluntários. Recomendamos que leia as regras e
+                outras informações relevantes para cada sorteio e concurso em que
+                participar. Além disso, recolhemos informações sobre as suas preferências para
+                receber comunicações de marketing da nossa parte, bem como sobre as suas interações com elas.</span></p>
+        <p><span id="otherData">Outros dados não listados explicitamente aqui.</span><span id="otherDataText">
+                Utilizaremos outros dados que forneça conforme descrito na presente Política de privacidade ou para
+                qualquer outro fim que lhe seja divulgado no momento em que recolhemos as suas informações.</span></p>
+        <p id="infoOfThirds">Informação de fontes de terceiros</p>
+        <p id="thirdsText">Poderemos recolher informações pessoais de outras fontes de terceiros, tais como:</p>
+        <p><span id="dataProveider">Fornecedores de dados.</span><span id="dataProveiderText"> Tais como os serviços de
+                informação e os licenciadores de dados que fornecem informações demográficas e outras informações, que,
+                entre outras finalidades, nos ajudam a detetar fraudes.</span></p>
+        <p><span id="affiliatePartners">Os nossos parceiros afiliados.</span><span id="affiliatePartnersText"> Como o
+                nosso fornecedor de rede de afiliados e editores, influenciadores e promotores que participam nos nossos
+                programas de afiliados pagos.</span></p>
+        <p><span id="marketingPartners">Parceiros de marketing.</span><span id="marketingPartnersText"> Por exemplo,
+                parceiros comerciais com os quais colaboramos em eventos de marketing.</span></p>
+        <p><span id="publicAutority">Autoridades públicas no EEE, no Reino Unido e na Suíça, fontes públicas e titulares
+                de direitos.</span><span id="publicAutorityText"> Podemos obter informações de fontes de terceiros, por
+                exemplo, conforme necessário para cumprir as nossas obrigações, prevenir, investigar ou detetar uma
+                alegada reivindicação ou crime, ou para que uma parte exerça os seus direitos legais.</span></p>
+        <p><span id="thirdsService">Outros serviços de terceiros: </span><span id="thirdsServiceText"> Poderemos obter
+                as suas informações a partir de outros serviços de terceiros, tais como:</span></p>
+        <p id="socialMedia">Serviços de redes sociais - a partir dos quais poderemos recolher informações como o seu
+            nome de utilizador, imagem de perfil e endereço de e-mail associados ao prestador de serviços de terceiros
+            relevante, se optar por se registar ou iniciar sessão no Serviço utilizando esse serviço de terceiros.</p>
+        <p id="logistics">Prestadores de serviços de logística – para concluir eficazmente o processamento de
+            encomendas, obteremos as suas informações de logística junto de fornecedores de logística, tais como o
+            progresso da entrega e a morada de entrega.</p>
+        <p id="autoInfo">Informações recolhidas automaticamente</p>
+        <p id="autoInfoText">Para melhorar a sua experiência com os nossos serviços e suportar as outras finalidades
+            para as quais recolhemos informações pessoais, nós, os nossos fornecedores de serviços e os nossos parceiros
+            comerciais podemos registar automaticamente informações sobre si, o seu computador ou dispositivo móvel e as
+            suas interações com o Serviço, as nossas comunicações, e outros serviços online ao longo do tempo, tais
+            como:</p>
+        <p><span id="deviceData">Dados do dispositivo: </span><span id="deviceDataText"> Recolhemos determinadas
+                informações sobre o dispositivo que utiliza para aceder ao Serviço, tais como o modelo do dispositivo,
+                informações do sistema operativo.</span></p>
+    </div>
+    <div id="useInfoDiv">
+        <h2 id="useInfo">Como e por que motivo utilizamos as suas informações</h2>
+        <p id="useInfoText1">Utilizamos as informações pessoais que recolhemos para vários fins, incluindo para
+            desenvolver, melhorar, apoiar e fornecer o Serviço, permitindo-lhe utilizar as suas funcionalidades ao mesmo
+            tempo que cumprimos e aplicamos os nossos Termos de utilização. Poderemos utilizar as suas informações
+            pessoais para as seguintes finalidades:</p>
+        <p><span id="createAndMantain">Crie e mantenha a sua conta. </span><span id="createAndMantainText"> Utilizamos
+                as suas informações pessoais para criar e manter o seu perfil de utilizador no Serviço, ativar as
+                funcionalidades de segurança da conta do Serviço (por exemplo, enviar códigos de segurança por e-mail ou
+                SMS).</span></p>
+        <p><span id="orders1">Encomendas e entrega de produtos e serviços. </span><span id="orders1Text"> Utilizamos as
+                suas informações pessoais para receber e processar encomendas, fornecer produtos e serviços, processar
+                pagamentos e comunicar consigo relativamente a encomendas, produtos e serviços e ofertas
+                promocionais.</span></p>
+        <p><span id="otimize">Melhorar e otimizar os serviços e a resolução de problemas. </span><span id="otimizeText">
+                Utilizamos as suas informações pessoais para otimizar funcionalidades, analisar métricas de desempenho,
+                corrigir erros e melhorar o Serviço e o nosso negócio. Como parte destas atividades, podemos criar dados
+                agregados ou de outra forma desidentificados com base nas informações pessoais que recolhemos.</span>
+        </p>
+        <p><span id="infoNotIdentified">Informação desidentificada. </span><span id="infoNotIdentifiedText"> Poderemos
+                desidentificar as suas informações de forma a que não possam ser razoavelmente utilizadas para inferir
+                informações sobre si ou de outra forma associadas a si. Na medida em que conservemos ou tratemos
+                quaisquer informações desidentificadas, iremos manter e utilizar essas informações de forma
+                desidentificada e não tentar reidentificar as informações, exceto apenas para determinar se o nosso
+                processo de desidentificação satisfaz os requisitos legais.</span></p>
+        <p><span id="communication">Comunicar consigo e fornecer atendimento ao cliente. </span><span
+                id="communicationText"> Utilizamos as suas informações pessoais para comunicar consigo (por exemplo,
+                anúncios, atualizações, alertas de segurança, atendimento e mensagens administrativas) e fornecer
+                atendimento ao cliente para os seus pedidos, perguntas e feedback.</span></p>
+        <p><span id="giveaways">Sorteios, concursos e outras promoções e eventos. </span><span id="giveawaysText">
+                Poderemos utilizar a imagem do seu perfil de utilizador e as informações da conta para o identificar em
+                promoções e eventos relacionados e facilitar os seus convites a amigos que pretenda convidar a aderir ao
+                Serviço.</span></p>
+        <p><span id="marketing1">Marketing. </span><span id="marketing1Text"> Nós e os nossos prestadores de serviços
+                podemos recolher e utilizar as suas informações pessoais para fins de marketing, de acordo com as suas
+                preferências e a legislação aplicável. Poderemos enviar-lhe comunicações de marketing diretas e
+                lembretes sobre carrinhos abandonados (ativados conforme descrito através da utilização de cookies que
+                recolhemos). Pode optar por não receber as nossas comunicações de marketing ou lembretes sobre carrinhos
+                abandonados, conforme descrito na secção "Os seus direitos e opções" abaixo.</span></p>
+        <p><span id="interestedPublicity">Publicidade baseada em interesses. </span><span id="interestedPublicityText">
+                A Lalala Utilities, os nossos prestadores de serviços e os nossos parceiros de publicidade externos
+                podem recolher e utilizar as suas informações pessoais para fins de publicidade baseada em interesses.
+                Ao fornecer publicidade baseada em interesses, seguimos os princípios de autorregulação da publicidade
+                comportamental online, tal como definidos pela Digital Advertising Alliance (DAA), que é uma organização
+                de defesa de direitos para o marketing digital responsável e a privacidade dos consumidores.</span></p>
+        <p><span id="fraudAndSecurity">Prevenção de fraudes e segurança. </span><span id="fraudAndSecurityText">
+                Utilizamos as suas informações pessoais para evitar, detetar, investigar e responder a fraudes, acesso
+                ou uso não autorizado do Serviço, violações dos Termos de Utilização, ou outra conduta imprópria.</span>
+        </p>
+        <p><span id="legalObligations">Cumprimento e obrigações legais: </span><span id="legalObligationsText">
+                Poderemos utilizar as suas informações pessoais para fins de conformidade e para cumprir a legislação,
+                as leis, pedidos e processos legais aplicáveis (por exemplo responder a intimações ou pedidos de
+                autoridades governamentais) associados ao seu país de residência; para proteger os seus direitos,
+                privacidade, segurança ou propriedade (incluindo a apresentação e a defesa em ações judiciais), os
+                nossos e os de outros utilizadores; auditar processos internos para garantir a conformidade com os
+                requisitos legais e contratuais e com as nossas políticas internas; aplicar os termos e condições que
+                regem o Serviço; prevenir, identificar, investigar e impedir atividades fraudulentas, nocivas, não
+                autorizadas, antiéticas ou ilegais, incluindo ciberataques e roubo de identidade.</span></p>
+        <p><span id="yourAgreement">Com o seu consentimento. </span><span id="yourAgreementText"> Em alguns casos,
+                poderemos solicitar especificamente o seu consentimento para recolher, utilizar ou partilhar as suas
+                informações pessoais, quando exigido pela legislação aplicável.</span></p>
+    </div>
+    <div id="shareInfoDiv">
+        <h2 id="shareInfo">Como e por que motivo partilhamos as suas informações</h2>
+        <p id="shareInfoText1">Na Lalala Utilities, preocupamo-nos profundamente com a privacidade. Embora a Lalala
+            Utilities partilhe as suas informações pessoais para fins de publicidade direcionada, o que pode ser
+            considerado uma "venda" ao abrigo das leis de privacidade aplicáveis, a Lalala Utilities não "vende"
+            informações pessoais no sentido tradicional. Poderemos partilhar as suas informações pessoais com as
+            seguintes entidades com o objetivo de lhe fornecer serviços melhores, fornecer comunicações de publicidade e
+            marketing personalizadas, proteger os seus direitos e/ou cumprir os requisitos legais:</p>
+        <p><span id="affiliatePeople">Afiliados. </span><span id="affiliatePeopleText"> Para efeitos de processamento de
+                encomendas, poderemos partilhar as suas informações pessoais relacionadas com a realização de
+                encomendas, tais como a morada de envio e as informações de contacto, com as subsidiárias e afiliadas da
+                Lalala Utilities Limited. Outras informações pessoais não relacionadas não serão partilhadas. Estas
+                subsidiárias e afiliadas seguem as mesmas práticas descritas na presente Política de Privacidade ou
+                seguem práticas pelo menos tão protetoras como as descritas na presente Política de Privacidade.</span>
+        </p>
+        <p><span id="serviceWorkers">Prestadores de serviços. </span><span id="serviceWorkersText"> Terceiros que
+                prestam serviços em nosso nome ou que nos ajudam a operar o Serviço ou o nosso negócio (como alojamento,
+                tecnologia de informação, atendimento ao cliente, entrega por e-mail, processamento e entrega de
+                encomendas, marketing e análise de websites). De um modo geral, exigimos que estes prestadores de
+                serviços utilizem as informações pessoais apenas conforme necessário para prestar os serviços ou cumprir
+                as obrigações legais aplicáveis.</span></p>
+        <p><span id="paymentWorkers">Processadores de pagamentos. </span><span id="paymentWorkersText"> Todas as
+                informações do cartão de pagamento que utilizar para efetuar uma compra no Serviço são recolhidas e
+                processadas diretamente pelos nossos processadores de pagamentos.</span></p>
+        <p><span id="thirdPeople">Terceiros designados por si. </span><span id="thirdPeopleText"> Poderemos partilhar os
+                seus dados pessoais com terceiros quando nos tiver instruído ou fornecido o seu consentimento para o
+                fazer. Poderemos partilhar as informações pessoais necessárias para os serviços que solicitou com
+                terceiros designados por si. Tenha em atenção que, quando utiliza sites ou serviços de terceiros, os
+                termos e políticas de privacidade dos mesmos regem a sua utilização desses sites ou serviços.</span></p>
+        <p><span id="partners">Parceiros empresariais e de marketing. </span><span id="partnersText"> Terceiros
+                especializados com os quais podemos colaborar para oferecer ou promover o Serviço.</span></p>
+        <p><span id="consultantPeople">Consultores profissionais, autoridades e reguladores. </span><span
+                id="consultantPeopleText"> Poderemos partilhar as suas informações com os nossos consultores
+                profissionais (por exemplo, advogados, auditores, banqueiros e seguradoras) em resposta a processos
+                legais (como os emitidos por tribunais ou autoridades no seu país de residência); e com outras partes
+                para aplicar os nossos acordos ou políticas, proteger os direitos, propriedade e segurança da Lalala
+                Utilities, dos utilizadores e de outros, e para detetar, prevenir e tratar de fraudes reais ou
+                suspeitas, violações dos Termos de utilização da Lalala Utilities, outras atividades ilegais, problemas
+                de segurança ou quando exigido por lei.</span></p>
+        <p><span id="businessAssignees">Cessionários empresariais. </span><span id="businessAssigneesText"> Adquirentes
+                e outros participantes relevantes em transações comerciais (ou negociações ou diligências devidas para
+                essas transações) que envolvam alienação, fusão, consolidação, aquisição, reorganização, venda de
+                empresas ou outra disposição da totalidade ou de qualquer parte do negócio ou dos ativos da, ou
+                participações na, Lalala Utilities ou nos nossos afiliados (incluindo, em relação a uma falência ou procedimentos
+                semelhantes).</span></p>
+        <p><span id="otherPeople">Parceiros de mercadorias/outros utilizadores. </span><span id="otherPeopleText">
+                Podemos partilhar com os parceiros de mercadorias as avaliações de produtos que o utilizador deixa, os
+                motivos de devolução ou reembolso solicitados e as informações de personalização para artigos
+                personalizados. O parceiro de mercadorias não receberá as suas informações de pagamento nem as suas
+                informações de contacto.</span></p>
+        <p id="shareInfoText2">Tenha em atenção que, ao utilizar os nossos Serviços, pode partilhar informações pessoais
+            com outras pessoas, por exemplo, quando outros utilizadores veem artigos na Lalala Utilities, podem ver
+            comentários de artigos que deixou. Os utilizadores não verão o seu nome, apenas verão o nome de Utilizador
+            ao deixar comentários.</p>
+    </div>
+    <div id="rightsOptionsDiv">
+        <h2 id="rightsOptions">Os seus direitos e opções</h2>
+        <p id="rightsOptionsText1">Se for um Titular dos Dados relativamente às atividades de Tratamento descritas na
+            presente Política de Privacidade, poderá ter os seguintes direitos e opções que podem ser exercidos de
+            acordo com a legislação aplicável:</p>
+        <p><span id="rightToKnow">Direito de conhecer/aceder. </span><span id="rightToKnowText">
+                O direito de obter confirmação do responsável sobre se estão ou não a ser Tratados Dados pessoais
+                relacionados consigo, e, quando for esse o caso, sobre o acesso aos Dados pessoais e a determinadas
+                informações.</span></p>
+        <p><span id="rightToDelete">Direito à eliminação. </span><span id="rightToDeleteText">
+                O direito de solicitar que eliminemos os Dados pessoais que mantemos sobre si sem demora injustificada
+                se e na medida em que os Dados pessoais já não forem necessários em relação aos fins para os quais foram
+                tratados, tiver retirado o seu consentimento sobre o qual se baseia o tratamento e quando não exista
+                nenhum outro fundamento jurídico para o tratamento. Além disso, a eliminação será realizada se se opor
+                ao tratamento e não existirem motivos legítimos prevalecentes para o tratamento, se os Dados pessoais
+                tiverem sido tratados ilegalmente, ou se os Dados pessoais tiverem de ser apagados para cumprimento de
+                uma obrigação legal na UE ou num Estado-Membro à qual estamos sujeitos.</span></p>
+        <p><span id="rightToRetificate">Direito à retificação. </span><span id="rightToRetificateText">
+                O direito de solicitar a correção de Dados pessoais incorretos que mantemos sobre si.</span></p>
+        <p><span id="rightToRestriction">Direito à restrição do tratamento. </span><span id="rightToRestrictionText">
+                O direito de solicitar que restrinjamos o tratamento se contestar a precisão dos Dados pessoais ou se o
+                tratamento for ilegal e se opuser à eliminação dos Dados pessoais e solicitar, em vez disso, a restrição
+                da sua utilização. Além disso, o tratamento será restringido se já não precisarmos dos Dados pessoais
+                para os fins do tratamento, mas necessitar do mesmo para o estabelecimento, exercício ou defesa de
+                reivindicações legais. Também restringimos o tratamento se tiver contestado o tratamento enquanto é
+                aguardada a verificação se os nossos motivos legítimos prevalecem sobre os seus.</span></p>
+        <p><span id="rightToPortableData">Direito à portabilidade dos dados. </span><span id="rightToPortableDataText">
+                O direito de solicitar que os Dados Pessoais associados a si que nos tenha fornecido sejam
+                disponibilizados num formato estruturado, de uso corrente e legível por máquina. Além disso, tem o
+                direito de transmitir esses dados para outro responsável sem interferência da nossa parte. Isto
+                aplica-se quando o tratamento se baseia no consentimento ou num contrato e o tratamento é realizado por
+                meios automatizados. Além disso, tem o direito de transmitir os dados pessoais diretamente de um
+                responsável para outro, quando tecnicamente viável. </span></p>
+        <p><span id="rightToOpposition">Direito de oposição. </span><span id="rightToOppositionText">
+                O direito de oposição, por motivos relacionados com a sua situação específica, a qualquer momento, ao
+                tratamento de Dados pessoais relacionados consigo baseado numa tarefa realizada no interesse público ou
+                num interesse legítimo. Deixaremos de tratar os Dados pessoais em caso de tal objeção, exceto se
+                demonstrarmos motivos legítimos convincentes para o tratamento que prevaleçam sobre os seus interesses,
+                direitos e liberdades ou para o estabelecimento, exercício ou defesa de reivindicações legais. Quando
+                tratamos Dados Pessoais para fins de marketing direto, incluindo a definição de perfis, na medida em que
+                esteja relacionada com esse marketing direto, tem o direito de se opor, a qualquer momento, ao
+                tratamento dos seus Dados Pessoais. Para obter mais informações, consulte a secção "Recusa de receção de
+                comunicações de marketing". </span></p>
+        <p><span id="rightToRetireConsent">Direito de retirar o consentimento. </span><span
+                id="rightToRetireConsentText">
+                O direito de retirar o seu consentimento a qualquer momento, quando o tratamento se basear no seu
+                consentimento. A retirada do consentimento não irá afetar a legalidade do tratamento com base no
+                consentimento antes da sua retirada. </span></p>
+        <p><span id="rightToAutomaticOpposition">Direito de se opor/recusar a tomada de decisões automatizadas:
+            </span><span id="rightToAutomaticOppositionText">
+                O direito de não ser sujeito a uma decisão quando esta se baseia no tratamento automatizado (ou seja,
+                uma operação realizada sem qualquer intervenção humana), se esta produzir um efeito legal (ou seja, se
+                tiver impacto nos seus direitos legais) ou se o afetar significativamente de uma forma semelhante (por
+                exemplo, se afetar significativamente a sua situação financeira ou a sua capacidade de aceder a bens ou
+                serviços essenciais) ou de recusar o tratamento dos seus Dados Pessoais para tais fins. A Lalala
+                Utilities não toma
+                decisões baseadas apenas no tratamento automatizado que produzam um efeito legal ou afetem
+                significativamente as pessoas singulares de uma forma semelhante. </span></p>
+        <p><span id="rightToComplain">Direito de apresentar uma reclamação a uma autoridade de controlo.
+            </span><span id="rightToComplainText">
+                Sem prejuízo de qualquer outro recurso administrativo ou judicial, o direito de apresentar uma
+                reclamação junto da nossa autoridade de controlo principal, da Comissão Portuguesa de Proteção de Dados
+                ou da sua autoridade de controlo local, se considerar que o tratamento dos seus Dados Pessoais infringe
+                o RGPD. </span></p>
+        <p id="rightsOptionsText2">Estes direitos podem ser limitados, por exemplo, se o cumprimento do seu pedido
+            revelar dados pessoais sobre outra pessoa, se violarem os direitos de terceiros (incluindo os nossos
+            direitos) ou se nos pedir para eliminar informações cuja conservação é exigida por lei ou em cuja
+            conservação temos um interesse legítimo. As isenções relevantes estão incluídas no RGPD/RGPD de Portugal e
+            na legislação local de implementação relevante.</p>
+        <p id="rightsOptionsText3">Pode exercer qualquer um destes direitos contactando-nos utilizando as informações
+            fornecidas abaixo. Não o iremos discriminar por exercer qualquer um destes direitos. Poderemos ter de
+            recolher informações suas para verificar a sua identidade antes de fornecer uma resposta substancial ao
+            pedido. Também pode designar um agente autorizado para efetuar pedidos em seu nome para exercer os seus
+            direitos. Antes de aceitar tal pedido de um agente, exigiremos que o agente forneça prova de que o autorizou
+            a agir em seu nome e poderemos necessitar que o Utilizador confirme a sua identidade diretamente connosco.
+        </p>
+        <p><span id="rightToRecuseMarketing">Recusa de receber Comunicações de marketing.
+            </span><span id="rightToRecuseMarketingText">
+                Para gerir as suas preferências ou cancelar a subscrição de comunicações de marketing, pode realizar
+                qualquer uma das seguintes ações:</span></p>
+        <p><span id="emailPromo">Ofertas promocionais por e-mail:
+            </span><span id="emailPromoText">
+                Se não desejar receber e-mails nossos relacionados com promoções ou ofertas especiais, pode seguir as
+                opções de anulação da assinatura no fundo de cada e-mail.</span></p>
+        <p><span id="phonePromo">Ofertas promocionais por telemóvel:
+            </span><span id="phonePromoText">
+                Quando nos fornece o seu número de telemóvel para fins de marketing, podemos enviar-lhe determinados
+                alertas de marketing por mensagem de texto e serão aplicadas as taxas padrão de dados e mensagens. Se já
+                não pretender receber os nossos alertas de marketing por telemóvel, pode seguir as instruções fornecidas
+                nessas mensagens ou responder "stop" a quaisquer alertas que enviarmos. Poderá continuar a utilizar a
+                Lalala Utilities mesmo que deixe de autorizar ofertas promocionais por telemóvel.</span></p>
+        <p><span id="pushNotification">Notificações push:
+            </span><span id="pushNotificationText">
+                Poderá receber notificações push quando utilizar a aplicação para dispositivos móveis. Se pretender
+                ajustar as definições das notificações push, incluindo desligá-las, pode fazê-lo nas definições de
+                notificação do dispositivo móvel.</span></p>
+        <p><span id="thirdsPlantform">Links para plataformas de terceiros.
+            </span><span id="thirdsPlantformText">
+                O Serviço pode conter links para websites, aplicações móveis e outros serviços online operados por
+                terceiros. Além disso, os nossos conteúdos podem ser integrados em páginas da Web ou noutros serviços
+                online que não estão associados a nós. Se optar por estabelecer ligação ao Serviço através da sua conta
+                de redes sociais ou de outra plataforma de terceiros, poderá utilizar as suas definições da sua conta
+                nessa plataforma para limitar as informações que recebe do mesmo. No entanto, tenha em atenção que estes
+                links e integrações não são um apoio a, ou uma representação de que somos afiliados a, terceiros. Além
+                disso, não controlamos websites, aplicações móveis ou serviços online operados por terceiros e não somos
+                responsáveis pelas suas ações. Por isso, recomendamos que leia as políticas de privacidade dos outros
+                websites, aplicações móveis e serviços online que utiliza. Se revogar a nossa capacidade de aceder a
+                informações de uma plataforma de terceiros, essa escolha não se aplicará a informações que já recebemos
+                desse terceiro.</span></p>
+        <p><span id="recuseInfos">Recusar o fornecimento de informações.
+            </span><span id="recuseInfosText">
+                Precisamos de recolher informações pessoais para fornecer determinados serviços. Se não fornecer as
+                informações que identificamos como necessárias ou obrigatórias, poderemos não ser capazes de fornecer
+                esses serviços.</span></p>
+    </div>
+    <div id="globalTransferDiv">
+        <h2 id="globalTransfer">As nossas Operações globais e Transferências de dados</h2>
+        <p id="globalTransferText1">Para apoiar as nossas operações globais:</p>
+        <p id="globalTransferText2">Armazenamos as informações descritas na secção «Que informações recolhemos?» em
+            servidores localizados no Espaço Económico Europeu (EEE).</p>
+        <p id="globalTransferText3">Algumas das nossas subsidiárias e afiliadas, localizadas fora da UE, do EEE, do
+            Reino Unido e da Suíça, têm acesso remoto limitado aos seus dados pessoais. Consulte a seção "Como e por que
+            motivo partilhamos as suas informações" acima para obter mais informações.</p>
+        <p id="globalTransferText4">Poderemos partilhar as suas informações com prestadores de serviços, parceiros e
+            outras entidades descritas em "Como e por que motivo partilhamos as suas informações", que podem estar
+            localizados fora da UE, do EEE, do Reino Unido e da Suíça.</p>
+        <p id="globalTransferText5">Estas partes comprometem-se a processar informações em conformidade com as leis de
+            privacidade aplicáveis e a implementar medidas de segurança adequadas para proteger as suas informações.</p>
+        <p id="globalTransferText6">Quando transferimos as suas informações para fora da UE, do EEE, do Reino Unido e da
+            Suíça, asseguramos que estas beneficiam de um nível adequado de proteção de dados, recorrendo a:</p>
+        <p id="globalTransferText7">Decisões de adequação. Estas são decisões da Comissão Europeia ao abrigo do artigo
+            45.º do RGPD (ou decisões equivalentes ao abrigo de outras leis), onde é reconhecido que um país oferece um
+            nível adequado de proteção de dados. Transferimos as suas informações conforme descrito em "Que informações
+            recolhemos?" para alguns países com decisões de adequação</p>
+        <p id="globalTransferText8">Cláusulas contratuais-tipo. A Comissão Europeia aprovou cláusulas contratuais ao
+            abrigo do artigo 46.º do RGPD que permitem a empresas no EEE transferir dados para fora do EEE. Estas
+            cláusulas (e o seu equivalente aprovado para o Reino Unido e a Suíça) são denominadas cláusulas
+            contratuais-tipo. Apoiamo-nos em cláusulas contratuais-tipo para transferir informações conforme descrito em
+            "Que informações recolhemos?" a determinadas filiais e terceiros em países sem uma decisão de adequação.</p>
+        <p id="globalTransferText9">Em determinadas situações, recorremos a derrogações previstas na legislação
+            aplicável para transferir informações para um país terceiro.</p>
+    </div>
+    <div id="dataProtectionDiv">
+        <h2 id="dataProtection">Regulamento Geral sobre a Proteção de Dados da União Europeia e leis de proteção de
+            dados de Portugal – base jurídica</h2>
+        <p id="dataProtectionText1">O RGPD da UE e as leis de proteção de dados do Reino Unido requerem uma base jurídica para a nossa utilização de informações pessoais. A nossa base varia consoante o fim específico para o qual utilizamos informações pessoais. Utilizamos:</p>
+        <p><span id="contract">Execução de um contrato.
+        </span><span id="contractText">
+            quando fornecemos os nossos Serviços ou comunicamos consigo sobre os mesmos. Isto inclui quando utilizamos as suas informações pessoais para desenvolver, melhorar, apoiar e fornecer o Serviço, permitindo-lhe utilizar as suas funcionalidades ao mesmo tempo que cumprimos e aplicamos os nossos Termos de utilização.</span></p>
+        <p><span id="ourInteress">Os nossos interesses comerciais legítimos e os interesses de terceiros e/ou dos nossos clientes.
+        </span><span id="ourInteressText">
+            quando otimizamos funcionalidades, analisamos métricas de desempenho, corrigimos erros e melhoramos o Serviço e a nossa empresa, quando detetamos e prevenimos fraudes e abusos, de forma a proteger a segurança dos nossos clientes, de nós próprios ou de terceiros, e quando lhe fornecemos publicidade baseada em interesses.</span></p>
+        <p><span id="urConsetment">O seu consentimento. 
+        </span><span id="urConsetmentText">
+            quando pedimos o seu consentimento para tratar as suas informações pessoais para um fim específico que lhe comunicamos. Quando autoriza o tratamento das suas informações pessoais para um fim específico, pode retirar o seu consentimento a qualquer momento e iremos parar de tratar os seus dados para esse fim.</span></p>
+        <p><span id="completeObligation">Cumprimento de uma obrigação legal. 
+        </span><span id="completeObligationText">
+            quando utilizamos as suas informações pessoais para fins de conformidade e para cumprir a legislação, as leis, pedidos e processos legais aplicáveis (por exemplo responder a intimações ou pedidos de autoridades governamentais) associados ao seu país de residência; para proteger os seus direitos, privacidade, segurança ou propriedade (incluindo a apresentação e a defesa em ações judiciais), os nossos e os de outros utilizadores; auditar processos internos para garantir a conformidade com os requisitos legais e contratuais e as nossas políticas internas; aplicar os termos e condições que regem o Serviço; prevenir, identificar, investigar e impedir atividades fraudulentas, nocivas, não autorizadas, antiéticas ou ilegais, incluindo ciberataques e roubo de identidade.</span></p>
+            <p><span id="juridicBase">Estas e outras bases jurídicas.
+            </span><span id="juridicBaseText">
+                dependendo do fim que descrevemos na secção "Como e por que motivo utilizamos as suas informações?"</span></p>
+        </div>
+    <div id="kidsDiv">
+        <h2 id="kids">Crianças</h2>
+        <p id="kidsText1">O Serviço não se destina ao uso por menores de 18 anos ou menores de idade (conforme definido
+            pela lei aplicável). Se você é pai ou responsável por uma criança sobre a qual acredita que coletamos
+            informações pessoais, entre em contato conosco. Se soubermos que coletamos informações pessoais de uma
+            criança por meio do Serviço ou sem o conhecimento dos pais ou responsável da criança, conforme exigido por
+            lei, cumpriremos os requisitos legais aplicáveis para excluir as informações.</p>
+    </div>
+    <div id="securityDiv">
+        <h2 id="security">Segurança e retenção de dados</h2>
+        <p id="securityText1">A segurança das suas informações pessoais é importante para nós. Utilizamos medidas técnicas e administrativas para ajudar a proteger as suas informações pessoais contra perdas, roubo, utilização indevida, acesso, divulgação, alteração e/ou destruição não autorizados. Também seguimos a Norma de segurança de dados do setor de cartões de pagamento ("PCI-DSS") para lidar com as informações do seu cartão de crédito. No entanto, o risco de segurança é inerente a todas as tecnologias da Internet e da informação.</p>
+        <p id="securityText2">Geralmente, conservamos informações pessoais para cumprir os fins para os quais as recolhemos, bem como para cumprir quaisquer requisitos legais, contabilísticos ou de comunicação, para o exercício ou defesa de direitos legais ou para fins de prevenção de fraudes. Para determinar o período de conservação adequado para informações pessoais, podemos considerar fatores como a quantidade, a natureza e a sensibilidade das informações pessoais, o potencial risco de danos resultantes da utilização ou divulgação não autorizada das suas informações pessoais, os fins para os quais tratamos as suas informações pessoais e se podemos alcançar esses fins através de outros meios, e os requisitos legais aplicáveis. Quando já não precisarmos das informações pessoais que recolhemos sobre si, podemos eliminá-las ou anonimizá-las.</p>
+        <p id="securityText3">Os dados dos utilizadores da Lalala Utilities localizados na União Europeia (UE), no Espaço Económico Europeu, no Reino Unido (RU) e na Suíça serão armazenados por defeito na infraestrutura dos prestadores de serviços em nuvem no Espaço Económico Europeu (EEE). A Lalala Utilities é um destino global de compras, portanto, quando necessário, a Lalala Utilities pode transferir dados relacionados com o cumprimento de pedidos para prestadores de serviços noutros países para prestar serviços de execução de pedidos e de logística. Não serão transferidas informações pessoais (como informações sobre a conta e o perfil) não relacionadas com os serviços de execução. Ao mesmo tempo, em todos os casos, garantiremos que todas as transferências de dados pessoais cumprem os requisitos legais aplicáveis.</p>
+    </div>
+    <div id="policyChangeDiv">
+        <h2 id="policyChange">Alterações à Política de privacidade</h2>
+        <p id="policyChangeText1">Reservamo-nos o direito de modificar a presente Política de Privacidade. Se fizermos
+            alterações materiais à presente Política de Privacidade, iremos notificá-lo através da atualização da data
+            da presente Política de Privacidade, publicando-a no Serviço e/ou fornecendo qualquer aviso exigido pela
+            legislação aplicável. Quaisquer modificações à presente Política de Privacidade entrarão em vigor aquando da
+            publicação da versão modificada (ou conforme indicado de outra forma no momento da publicação). Recomendamos
+            que reveja a Política de Privacidade sempre que visita o nosso Serviço, para se manter informado sobre as
+            nossas práticas de privacidade.</p>
+    </div>
+    <div id="contactUs1Div">
+        <h2 id="contactUs1">Contacte-nos</h2>
+        <p id="contactUsText1">Se tiver alguma dúvida ou comentário sobre a nossa Política de privacidade ou os termos mencionados, pode contactar-nos a qualquer momento:</p>
+        <p id="contactUsText2">Envie um e-mail para Lalalautilities2024@hotmail.com</p>
+        <p id="contactUsText3">Também tem o direito de apresentar uma reclamação junto da autoridade de controlo principal da Lalala Utilities, da Comissão Portuguesa de Proteção de Dados ou da sua autoridade de controlo local.</p>
+    </div>
+    <!-- Adicione o jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/privacyPolicy.js"></script>
+</body>
+
+<footer>&copy;José Lúcio</footer>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lalala 3 Utilities</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles/cart.css" type="text/css">
+  <link rel="icon" type="image/png" href="images/Lalala logo.jpg">
+</head>
+<header class="header">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/homePageUser">
+        <img src="images/Lalala logo.jpg" alt="Logo" width="220" height="110">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a id="homeLink" class="nav-link" href="/homePageUser">Início</a>
+          </li>
+          <li class="nav-item">
+            <a id="aboutLink" class="nav-link" href="/aboutUser">Sobre nós</a>
+          </li>
+          <li class="nav-item">
+            <a id="servicesLink" class="nav-link" href="/servicesUser">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a id="contactLink" class="nav-link" href="/contactUser">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a id="accountLink" class="nav-link" href="/account">Conta</a>
+          </li>
+          <li class="nav-item">
+            <a id="privacyPoliticsLink" class="nav-link" href="/privacyPolicy">Política de Privacidade</a>
+          </li>
+          <li class="nav-item">
+            <a id="termsAndConditionsLink" class="nav-link" href="/termsAndConditions">Termos e condições</a>
+          </li>
+        </ul>
+      </div>
+      <input type="radio" id="portuguese" name="language" onclick="changeLanguage('pt')" value="portuguese" checked>
+      <label class="portuguese" for="portuguese">PT</label>
+
+      <input type="radio" id="english" name="language" onclick="changeLanguage('en')" value="english">
+      <label class="english" for="english">ENG</label>
+      <a class="shopping-cart" href="/cart">
+        <i class="fas fa-shopping-cart shopping-icon"></i>
+        <div class="cart-item-count-container">
+            <span id="cartItemCount" class="cart-item-count-circle"></span> <!-- Exemplo de número de itens no carrinho -->
+        </div>
+      </a>
+      <a class="profile-button" href="/account">
+        <i class="fas fa-user profile-icon"></i>
+      </a> 
+      <a class="logout-button" href="">
+        <i class="fas fa-sign-out-alt logout-icon"></i>
+    </a>  
+    </div>
+  </nav>
+</header>
+
+<body>
+  <div class="container mt-5">
+      <h1 class="mb-3" id="products">Produtos no carrinho</h1>
+      <div class="row">
+        <div class="col">
+        <div class="col-md-12" id="products-container"></div>
+        <h3 class="mb-3" id="productsToAdd">Produtos que ainda pode adicionar</h3>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="searchInput" maxlength="50" placeholder="Pesquisar produtos pelo nome">
+          <button class="btn btn-outline-secondary" type="button" id="searchButton">Pesquisar</button>
+        </div> 
+        <div class="row" id="products-container1"></div>
+        </div>
+        <div class="col">
+          <div class="container col-md-12 morada"><br>
+            <h3 class="mb-6 morada1">Morada:</h3>
+            <button id="getDataButton" class="btn btn-outline-primary mb-6">Obter dados da conta</button>
+            <form id="addressForm">
+              <div class="mb-6">
+                <label for="country" class="form-label country">País:</label>
+                <input type="text" class="form-control" maxlength="50" id="country" name="country" required>
+              </div>
+              <div class="mb-6">
+                <label for="region" class="form-label region">Distrito/Região:</label>
+                <input type="text" class="form-control" maxlength="50" id="region" name="region" required>
+              </div>
+              <div class="mb-6">
+                <label for="phoneNumber" class="form-label phoneNumber">Número de Telemóvel:</label>
+                <input type="tel" class="form-control" maxlength="50" id="phoneNumber" name="phoneNumber" required>
+              </div>
+              <div class="mb-6">
+                <label for="city" class="form-label city">Cidade:</label>
+                <input type="text" class="form-control" maxlength="50" id="city" name="city" required>
+              </div>
+              <div class="mb-6">
+                <label for="address" class="form-label address">Endereço:</label>
+                <input type="text" class="form-control" maxlength="50" id="address" name="address" required>
+              </div>
+              <div class="mb-6">
+                <label for="address1" class="form-label address1">Endereço 1(Opcional):</label>
+                <input type="text" class="form-control" maxlength="50" id="address1" name="address1">
+              </div>
+              <div class="mb-6">
+                <label for="postalCode" class="form-label postalCode">Código Postal:</label>
+                <input type="text" class="form-control" maxlength="50" id="postalCode" name="postalCode" required>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-12 cart1">
+            <div class="card cart mt-3">
+                <div class="card-body">
+                    <h5 class="card-title" id="cartSummary">Sumário Carrinho</h5>
+                    <div>
+                      <span id="subtotalDiv">Subtotal do carrinho</span>
+                       <span id="subtotal">0.00€</span></div>
+                    <div >
+                      <span id="shippingDiv">Custos envio</span>
+                    <span id="shipping-costs">0.00€</span></div>
+                    <hr>
+                    <div id="total">Total: <span id="total-price">0.00€</span></div>
+                    <div id="paypal-button-container"></div>
+                    <div> <i class="fas fa-info"></i> <span id="buy-info">Precisa de pelo menos 15€ em produtos para avançar no pagamento</span></div><br>
+                    <div> <i class="fas fa-info"></i> <span id="buy-info1">A disponibilidade e o preço dos artigos não estão garantidos até ao pagamento final</span></div><br>
+                    <div>
+                      <h6><i class="fas fa-lock"></i> <span id="privacidade">Privacidade segura</span></h6>
+                      <p id="privacidadeText">A proteção da sua privacidade é importante para nós! Asseguramos-lhe que as suas informações serão mantidas em segurança e não serão comprometidas. 
+                      Não vendemos os seus dados pessoais a troco de dinheiro e apenas utilizaremos os seus 
+                      dados em conformidade com a nossa política de privacidade e de cookies para fornecer e 
+                      melhorar os nossos serviços ao utilizador</p>
+                  </div>
+                  <div>
+                      <h6><i class="fas fa-shield-alt"></i> <span id="shopProteccion">Proteção de compras da Lalala utilities</span> </h6>
+                      <p id="shopProteccionText">Compre com confiança na Lalala utilitites sabendo que, se algo correr mal, estará sempre protegido(a).</p>
+                  </div>
+                  <div>
+                    <h6><i class="fas fa-truck"></i> <span id="shopDelivery">Garantia de entregas</span></h6>
+                    <p>
+                      <i class="fas fa-check"></i> <span id="shopDelivery1">Reembolso de 15 dias sem atualizações</span><br>
+                      <i class="fas fa-check"></i> <span id="shopDelivery2">Reembolso por artigo danificado</span><br>
+                      <i class="fas fa-check"></i> <span id="shopDelivery3">Reembolso por 30 dias sem entrega</span>
+                  </p>
+                </div> 
+                </div>
+            </div>
+        </div>
+        </div>
+      </div>
+  <div class="modal fade" id="SuccessErrorModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p  id="text2"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p  id="text3"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=AaCJQIxf92El1W_iwnT_BUa6wE-h3k3T-MyR9s2XxYewBQwhj0_au3YULC3nucQFrMsvA7rNkDsc2ZOm&currency=EUR"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts/cart.js"></script>
+</body>
+  <footer>&copy;José Lúcio</footer>
+  
+  </html>

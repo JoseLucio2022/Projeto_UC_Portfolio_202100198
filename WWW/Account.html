@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lalala 3 Utilities</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles/account.css" type="text/css">
+  <link rel="icon" type="image/png" href="images/Lalala logo.jpg">
+</head>
+<header class="header">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/homePageUser">
+        <img src="images/Lalala logo.jpg" alt="Logo" width="220" height="110">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a id="homeLink" class="nav-link" href="/homePageUser">Início</a>
+          </li>
+          <li class="nav-item">
+            <a id="homeLink1" class="nav-link" href="/homePageAdmin">Início</a>
+          </li>
+          <li class="nav-item">
+            <a id="aboutLink" class="nav-link" href="/aboutUser">Sobre nós</a>
+          </li>
+          <li class="nav-item">
+            <a id="servicesLink" class="nav-link" href="/servicesUser">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a id="contactLink" class="nav-link" href="/contactUser">Contacto</a>
+          </li>
+          <li class="nav-item active">
+            <a id="accountLink" class="nav-link" href="/account">Conta <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a id="privacyPoliticsLink" class="nav-link" href="/privacyPolicy">Política de Privacidade</a>
+          </li>
+          <li class="nav-item">
+            <a id="termsAndConditionsLink" class="nav-link" href="/termsAndConditions">Termos e condições</a>
+          </li>
+          <li class="nav-item">
+            <a id="adminServicesLink" class="nav-link" href="/adminServices">Serviços Admin</a>
+          </li>
+        </ul>
+      </div>
+      <input type="radio" id="portuguese" name="language" onclick="changeLanguage('pt')" value="portuguese" checked>
+      <label for="portuguese">PT</label>
+      <input type="radio" id="english" name="language" onclick="changeLanguage('en')" value="english">
+      <label for="english">ENG</label>
+      <a class="shopping-cart" href="/cart">
+        <i class="fas fa-shopping-cart shopping-icon"></i>
+        <div class="cart-item-count-container">
+            <span id="cartItemCount" class="cart-item-count-circle"></span> <!-- Exemplo de número de itens no carrinho -->
+        </div>
+      </a>
+      <a class="profile-button" href="/account">
+        <i class="fas fa-user profile-icon"></i>
+      </a>  
+      <a class="logout-button" href="">
+        <i class="fas fa-sign-out-alt logout-icon"></i>
+    </a>  
+    </div>
+  </nav>
+</header>
+
+<body>
+  <div class="container mt-5">
+    <!-- Labels para os dados do usuário -->
+    <div class="row">
+      <div class="col-sm-3"><label for="userUid" id="userUidLabel" class="font-weight-bold">User ID:</label></div>
+      <div class="col-sm-9"><span id="userUid"></span></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"><label for="userName" id="userNameLabel" class="font-weight-bold">Nome de usuário:</label></div>
+      <div class="col-sm-9"><span id="userName"></span></div>
+      <div class="col-sm-1 d-flex align-items-center justify-content-end">
+        <button type="button" class="btn btn-outline-primary" id="editUserNameBtn">
+          <i class="fas fa-edit"></i>
+        </button>
+      </div>
+    </div>
+    <div class="modal fade" id="editUserNameModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title editUserName">Editar Nome de Utilizador</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="newUserName" class="newUserName">Novo Nome de Usuário:</label>
+            <input type="text" maxlength="50" class="form-control" id="newUserName">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary cancel" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary save" id="saveUserNameBtn">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"><label for="name" id="nameLabel" class="font-weight-bold">Nome:</label></div>
+      <div class="col-sm-9"><span id="name"></span></div>
+      <div class="col-sm-1 d-flex align-items-center justify-content-end">
+        <button type="button" class="btn btn-outline-primary" id="editNameBtn">
+          <i class="fas fa-edit"></i>
+        </button>
+      </div>
+    </div>
+    <div class="modal fade" id="editNameModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title editName" id="editModalLabel">Editar Nome</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="newName" class="newName">Novo Nome:</label>
+            <input type="text" maxlength="50" class="form-control" id="newName">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary cancel1" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary save1" id="saveNameBtn">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"><label for="email" id="emailLabel" class="font-weight-bold">Email:</label></div>
+      <div class="col-sm-2"><span id="email"></span></div>
+      <div class="col-sm-3">
+        <label for="emailVerified" id="emailVerifiedLabel" class="font-weight-bold">Email verificado:</label>
+        <span id="emailVerifiedIcon"><i id="emailIcon" class="fas"></i></span>
+    </div>
+    <div class="col-sm-3">
+    <button id="sendVerificationEmail" class="underline-button">Enviar email de verificação</button>
+  </div>  
+    <div class="col-sm-1 d-flex align-items-center justify-content-end"><button type="button"
+          class="btn btn-outline-primary" id="editEmailBtn">
+          <i class="fas fa-edit"></i>
+        </button></div>
+    </div>
+    <div class="modal fade" id="editEmailModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title editEmail" id="editModalLabel">Editar Email</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="newEmail" class="newEmail">Novo Email:</label>
+            <input type="text" maxlength="50" class="form-control" id="newEmail">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary cancel2" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary save2" id="saveEmailBtn">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"><label for="password" id="passwordLabel" class="font-weight-bold">Password:</label></div>
+      <div class="col-sm-9"><span id="password"></span></div>
+      <div class="col-sm-1 d-flex align-items-center justify-content-end"><button type="button"
+          class="btn btn-outline-primary" id="editPasswordBtn">
+          <i class="fas fa-edit"></i>
+        </button></i></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"><label for="phoneNumber" id="phoneNumberLabel" class="font-weight-bold">Número telemóvel:</label></div>
+      <div class="col-sm-9"><span id="phoneNumber"></span></div>
+      <div class="col-sm-1 d-flex align-items-center justify-content-end"><button type="button"
+          class="btn btn-outline-primary" id="editPhoneNumberBtn">
+          <i class="fas fa-edit"></i>
+        </button></div>
+    </div>
+    <div class="modal fade" id="editPhoneNumberModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title edit-phoneNumber" id="editModalLabel">Editar Número Telemóvel</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="input-group">
+                <select id="countryCodeSelect" class="form-select"></select>
+                <input type="tel" class="form-control newPhoneNumber" maxlength="15" minlength="5" id="newPhoneNumber" name="newPhoneNumber" placeholder="Digite o seu número de telemóvel" required>
+            </div>
+        </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary cancel3" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary save3" id="savePhoneNumberBtn">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"><label for="country" id="countryLabel" class="font-weight-bold">País:</label></div>
+      <div class="col-sm-9"><span id="country"></span></div>
+      <div class="col-sm-1 d-flex align-items-center justify-content-end"><button type="button"
+          class="btn btn-outline-primary" id="editCountryBtn">
+          <i class="fas fa-edit"></i>
+        </button></div>
+    </div>
+    <div class="modal fade" id="editCountryModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title editCountry" id="editModalLabel">Editar País</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="newCountry" class="newCountry">Selecione o País:</label>
+            <select class="form-select" id="newCountry">
+              <!-- Opções de país serão adicionadas aqui -->
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary cancel4" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary save4" id="saveCountryBtn">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"><label for="region" id="regionLabel" class="font-weight-bold">Distrito/Região:</label></div>
+      <div class="col-sm-9"><span id="region"></span></div>
+      <div class="col-sm-1 d-flex align-items-center justify-content-end"><button type="button"
+          class="btn btn-outline-primary" id="editRegionBtn">
+          <i class="fas fa-edit" id="editRegionBtn"></i>
+        </button></i></div>
+    </div>
+    <div class="modal fade" id="editRegionModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title editRegion" id="editModalLabel">Editar Região/Distrito</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="newRegion" class="newRegion">Nova Região/Distrito:</label>
+            <input type="text" maxlength="50" class="form-control" id="newRegion">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary cancel5" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary save5" id="saveRegionBtn">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"><label for="city" id="cityLabel" class="font-weight-bold">Cidade:</label></div>
+      <div class="col-sm-9"><span id="city"></span></div>
+      <div class="col-sm-1 d-flex align-items-center justify-content-end"><button type="button"
+          class="btn btn-outline-primary" id="editCityBtn">
+          <i class="fas fa-edit"></i>
+        </button></div>
+    </div>
+    <div class="modal fade" id="editCityModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title editCity" id="editModalLabel">Editar Cidade</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="newCity" class="newCity">Nova Cidade:</label>
+            <input type="text" maxlength="50" class="form-control" id="newCity">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary cancel6" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary save6" id="saveCityBtn">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"><label for="address" id="addressLabel" class="font-weight-bold">Endereço:</label></div>
+      <div class="col-sm-9"><span id="address"></span></div>
+      <div class="col-sm-1 d-flex align-items-center justify-content-end"><button type="button"
+          class="btn btn-outline-primary" id="editAddressBtn">
+          <i class="fas fa-edit"></i>
+        </button></div>
+    </div>
+    <div class="modal fade" id="editAddressModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title editAddress" id="editModalLabel">Editar Endereço</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="newAddress" class="newAddress">Novo Endereço:</label>
+            <input type="text" maxlength="50" class="form-control" id="newAddress">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary cancel8" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary save8" id="saveAddressBtn">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"><label for="address1" id="address1Label" class="font-weight-bold">Endereço 1:</label></div>
+      <div class="col-sm-9"><span id="address1"></span></div>
+      <div class="col-sm-1 d-flex align-items-center justify-content-end"><button type="button"
+          class="btn btn-outline-primary" id="editAddress1Btn">
+          <i class="fas fa-edit"></i>
+        </button></div>
+    </div>
+    <div class="modal fade" id="editAddress1Modal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title editAddress1" id="editModalLabel">Editar Endereço</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="newAddress1" class="newAddress1">Novo Endereço:</label>
+            <input type="text" maxlength="50" class="form-control" id="newAddress1">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary cancel9" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary save9" id="saveAddress1Btn">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"><label for="postalCode" id="postalCodeLabel" class="font-weight-bold">Código Postal:</label>
+      </div>
+      <div class="col-sm-9"><span id="postalCode"></span></div>
+      <div class="col-sm-1 d-flex align-items-center justify-content-end"><button type="button"
+          class="btn btn-outline-primary" id="editPostalCode">
+          <i class="fas fa-edit" id="editPostalCodeBtn"></i>
+        </button></div>
+    </div>
+    <div class="modal fade" id="editPostalCodeModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title editPostalCode" id="editModalLabel">Editar Código Postal</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="newPostalCode" class="newPostalCode">Novo Código Postal:</label>
+            <input type="text" maxlength="50" class="form-control" id="newPostalCode">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary cancel7" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary save7" id="savePostalCodeBtn">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"><label for="deleteAccount" id="deleteAccountLabel" class="font-weight-bold">Eliminar Conta:</label>
+      </div>
+      <div class="col-sm-2"><button type="button"
+          class="btn btn-outline-primary" id="deleteAccount">
+          <i class="fas fa-trash-alt" id="deleteAccountBtn"></i>
+        </button></div>
+    </div>
+    <div class="modal fade" id="editPostalCodeModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editModalLabel">Editar Código Postal</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="newPostalCode">Novo Código Postal:</label>
+            <input type="text" maxlength="50" class="form-control" id="newPostalCode">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" id="savePostalCodeBtn">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"><label for="logOut" id="logOutLabel" class="font-weight-bold">Sair:</label></div>
+      <div class="col-sm-9"><span id="logOut"></span></div>
+      <div class="col-sm-1 d-flex align-items-center justify-content-end">
+        <button type="button" class="btn btn-outline-primary">
+          <i class="fas fa-sign-out-alt" id="logOutBtn"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="deleteAccountModal" tabindex="-1" aria-labelledby="deleteAccountModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title deleteAccount" id="deleteAccountModalLabel">Eliminar conta</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <label for="deleteAccountModal" class="message">Tem a certeza que deseja eliminar a conta?</label>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary cancel10" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary delete" id="saveDeleteAccountBtn">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="confirmPasswordModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmPasswordLabel">Confirmar Password</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <label for="confirmPassword">Insira a password:</label>
+          <input type="password" maxlength="50" class="form-control" id="confirmPassword">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="confirmPasswordBtn">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="editPasswordModal" tabindex="-1" aria-labelledby="customModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title editPassword" id="editPasswordModalLabel">Email de redefinição de password enviado!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="modalMessage" class="modalMessage">Visite o seu email para redefinir a password! O email pode estar no lixo ou correio eletrónico não solicitado!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="successErrorModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p  id="text2"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <h3 class="mb-2" id="orders">Encomendas</h3>
+    <button id="show-orders-button" class="underline-button1">Ver encomendas</button>
+    <div id="orders-container"></div>
+</div>
+<div class="modal fade" id="avaliarModal" tabindex="-1" aria-labelledby="avaliarModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title rateProducts" id="avaliarModalLabel">Avaliar Produtos</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary close1" data-bs-dismiss="modal">Fechar</button>
+          </div>
+      </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="scripts/account.js"></script>
+</body>
+<footer>&copy;José Lúcio</footer>
+
+</html>

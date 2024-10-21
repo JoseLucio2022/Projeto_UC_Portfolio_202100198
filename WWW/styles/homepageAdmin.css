@@ -1,0 +1,108 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css");
+
+body{
+    background-color: darkslategrey;
+}
+
+#homeLink{
+    color: white;
+}
+
+
+footer {
+    text-align: center;
+    color: white;
+}
+
+/* Estilo para os radio buttons */
+
+input[type="radio"] {
+    display: none; /* Oculta o radio button padrão */
+  }
+  
+  label {
+ /* Torna os labels em blocos para adicionar estilos */
+    padding: 10px 20px; /* Adiciona preenchimento para espaçamento interno *//* Adiciona espaçamento entre os radio buttons */
+    border: grey;
+     /* Adiciona uma borda aos radio buttons */
+    border-radius: 5px; /* Adiciona uma borda arredondada */
+    cursor: pointer; 
+    color: grey;
+    background-color: darkslategrey; /* Altera o cursor ao passar por cima do label */
+  }
+  
+  input[type="radio"]:checked + label {
+    color: white;
+    border: 3px solid white;
+     /* Altera a cor do texto quando o radio button está selecionado */
+  }
+
+
+  #products{
+    color:white
+  }
+  
+  .modal-content{
+    background-color: #212529;
+    color: white;
+  }
+  
+  .card{
+    color: white;
+    background-color: #212529;
+  }
+
+  #products-container{
+    margin-left: 20%;
+  }
+
+  .btn-primary {
+    background-color: darkslategrey;
+    color: grey;
+    border-color: darkslategrey;
+    margin-left: 30px;
+}
+
+.btn-primary:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+/* Remover cor azul padrão do botão ao ser clicado */
+.btn-primary:focus,
+.btn-primary.focus {
+    box-shadow: none !important;
+}
+
+/* Remover borda azul padrão do botão ao ser clicado */
+.btn-primary:active,
+.btn-primary.active,
+.show > .btn-primary.dropdown-toggle {
+    background-color: darkslategrey !important;
+    color: grey !important;
+    border-color: darkslategrey !important;
+    box-shadow: none !important;
+}
+
+#contactUs{
+  color: white;
+}
+
+#customize, #contactUs {
+  display: inline;
+}
+
+.subCategory1{
+  display: none;
+  margin-top: 10px;
+}
+
+.navbar-brand{
+  margin-left: -5%;
+}
+
+#products-container{
+  margin-left: 8%;
+  margin-top: 1%;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head> 
+<meta charset="UTF-8">
+<title>Lalala Login</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="styles/login.css" type="text/css">
+<link rel="icon" type="image/png" href="images/Lalala logo.jpg">
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_PT/sdk.js#xfbml=1&version=v19.0&appId=433793925997648" nonce="4LsizmSf"></script>
+</head>
+<body>
+    <div class="container">
+      <h2 class="mt-5">Login</h2>
+      <form id="loginForm" name="loginForm" action="/loginForm" method="post">
+        <div class="form-group">
+          <label for="email" class="email">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Digite o seu email" required>
+        </div>
+        <div class="form-group">
+          <label for="password" class="password">Password:</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Digite a sua password" required>
+        </div>
+        <button id="btnSubmeter" type="submit" value="submeter" class="btn btn-primary">Entrar</button>
+        <div class="g-recaptcha" data-sitekey="6Le0bJ8pAAAAACtaVxBWAdPBlAT9phEcxFa7-9NP"></div>
+        <div id="error-message">Erro ao autenticar: Credenciais inválidas... Tente novamente...</div>
+      </form>
+      <p class="message1">Esqueceu-se da palavra-passe? <a class="btn-criar-conta" href="/recoverPassword">Recuperar Password</a></p>
+      <p class="message">Ainda não tem conta? <a class="btn-criar-conta" href="/signUp">Criar Conta</a></p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-1">
+        <a href="#" class="btn" id="google-button"><img src="images/google.png" class="google-button" alt="Google"></a>
+      </div>    
+      <div class="col-1">
+        <a href="#" class="btn" id="twitter-button"><img src="images/x.jpeg" class="twitter-button" alt="Twitter"></a>
+      </div>
+    </div>
+    <!-- Modal 1 -->
+    <div class="modal" id="successErrorModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Concorda com os termos de condições e a política de privacidade?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="termsCheckbox" required>
+            <label class="form-check-label" for="termsCheckbox">Eu li e concordo com os <a href="/termsAndConditions" id="termsAndConditions" target="_blank">termos de utilização</a> e a <a href="/privacyPolicy" id="privacyPolitics" target="_blank">política de privacidade</a>.</label>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button id="confirmButton1" type="button" class="btn btn-primary">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal" id="successErrorModal1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Concorda com os termos de condições e a política de privacidade?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="termsCheckbox1" required>
+            <label class="form-check-label" for="termsCheckbox1">Eu li e concordo com os <a href="/termsAndConditions" id="termsAndConditions" target="_blank">termos de utilização</a> e a <a href="/privacyPolicy" id="privacyPolitics" target="_blank">política de privacidade</a>.</label>
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-bs-dismiss="modal" class="btn btn-secondary">Fechar</button>
+            <button id="confirmButton2" type="button" class="btn btn-primary">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Adicione o Bootstrap JS (necessário antes do seu script personalizado) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Adicione o jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Adicione o JavaScript personalizado -->
+    <script src="scripts/login.js"></script>
+</body>
+<footer>&copy;José Lúcio</footer>
+</html>
+

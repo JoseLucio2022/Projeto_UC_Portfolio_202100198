@@ -1,0 +1,98 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css");
+body{
+    background-color: #212529;
+}
+.message{
+    margin-top: 2%;
+    margin-left: 43%;
+    color: white;
+}
+
+.mt-5{
+    color: white;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.btn-primary{
+    background-color: darkslategrey;
+    color: white;
+    border-color: darkslategrey;
+    margin-top: 2%;
+    margin-left: 46%;
+}
+
+.btn-primary:hover {
+    background-color: black; /* Nova cor de fundo */
+    color: white; /* Cor do texto (opcional, se desejar mudar) */
+    border-color: black;
+}
+
+/* Remover cor azul padrão do botão ao ser clicado */
+.btn-primary:focus,
+.btn-primary.focus {
+    box-shadow: none !important;
+}
+
+/* Remover borda azul padrão do botão ao ser clicado */
+.btn-primary:active,
+.btn-primary.active,
+.show > .btn-primary.dropdown-toggle {
+    background-color: darkslategrey !important; /* Nova cor de fundo */
+    color: grey !important; /* Cor do texto (opcional, se desejar mudar) */
+    border-color: darkslategrey !important; /* Cor da borda (opcional, se desejar mudar) */
+    box-shadow: none !important; /* Remover sombra */
+}
+
+.btn-entrar-conta{
+    color: grey
+}
+.btn-entrar-conta:hover {
+    color:white
+}
+
+.email{
+    color: white;
+}
+
+.password{
+    color: white;
+}
+
+.userName{
+    color: white;
+}
+
+.name{
+    color: white;
+}
+
+.phoneNumber{
+    color: white;
+}
+
+footer{
+    margin-left: 47%;
+    color: white;
+  }
+
+#error-message{
+    display: none;
+    color: red;
+    text-align: center;
+}
+
+
+.g-recaptcha{
+    margin-top: 2%;
+    margin-left: 38%;
+}
+
+.form-check{
+    color:white;
+    margin-left: 30%;
+}
+
+#privacyPolitics,#termsAndConditions{
+color: white;
+}

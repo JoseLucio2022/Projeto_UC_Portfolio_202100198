@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head> 
+<meta charset="UTF-8">
+<title>Lalala Sign Up</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+<link rel="stylesheet" href="styles/signUp.css" type="text/css">
+<link rel="icon" type="image/png" href="images/Lalala logo.jpg">
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="container">
+      <h2 class="mt-5">Registo</h2>
+      <form id="signUpForm" name="signUpForm" action="/signUpForm" method="post">
+        <div class="form-group">
+            <label for="userName" class="userName">Nome de usuário:</label>
+            <input type="text" class="form-control" maxlength="100" id="userName" name="userName" placeholder="Digite o seu nome de usuário" required>
+          </div>
+        <div class="form-group">
+            <label for="name" class="name">Nome (Opcional):</label>
+            <input type="text" class="form-control" maxlength="100" id="name" name="name" placeholder="Digite o seu nome">
+        </div>
+        <div class="form-group">
+          <label for="email" class="email">Email:</label>
+          <input type="email" class="form-control" maxlength="100" id="email" name="email" placeholder="Digite o seu email" required>
+        </div>
+        <div class="form-group">
+          <label for="password" class="password">Password:</label>
+          <input type="password" class="form-control" max="100" id="password" name="password" placeholder="Digite a sua password" required>
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber" class="phoneNumber">Número telemóvel (Opcional):</label><br>
+          <input type="tel" class="form-control" maxlength="15" minlength="5" id="phoneNumber" name="phoneNumber" placeholder="Digite o seu número de telemóvel">
+        </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="termsCheckbox" required>
+            <label class="form-check-label" for="termsCheckbox">Eu li e concordo com os <a href="/termsAndConditions" id="termsAndConditions" target="_blank">termos de utilização</a> e a <a href="/privacyPolicy" id="privacyPolitics" target="_blank">política de privacidade</a>.</label>
+          </div>
+          <div id="error-message"></div>
+          <div class="g-recaptcha" data-sitekey="6Le0bJ8pAAAAACtaVxBWAdPBlAT9phEcxFa7-9NP"></div>
+        <button id="btnSubmeter" type="submit" value="submeter" class="btn btn-primary">Registar</button>
+      </form>
+      <p class="message">Já tens conta? <a class="btn-entrar-conta" href="/login">Entrar...</a></p>
+    </div>
+    <!-- Adicione o jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <!-- Adicione o JavaScript personalizado -->
+    <script src="scripts/signUp.js"></script>
+    <!-- Adicione o Bootstrap JS (opcional, apenas necessário para funcionalidades como o botão de colapso) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+<footer>&copy;José Lúcio</footer>
+</body>
+</html>
